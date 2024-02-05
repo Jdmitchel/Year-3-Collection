@@ -6,7 +6,8 @@ import javax.swing.JPanel;
 
 public class GamePanel extends JPanel {
    
-   Bat bat;
+   private Bat bat;
+   private Alien alien;
 
    public GamePanel () {
 	bat = null;
@@ -14,32 +15,36 @@ public class GamePanel extends JPanel {
 
 
    public void createGameEntities() {
-       bat = new Bat (this, 50, 350); 
+      bat = new Bat (this, 50, 350); 
    }
 
 
    public void drawGameEntities() {
+      if (bat != null) {
+         bat.draw();
+      }
+   }
 
-       if (bat != null) {
-       	  bat.draw();
-       }
+   public void dropAlien(){
+      alien = new Alien(this, 50, 50);
+      alien.start();
    }
 
 
    public void updateGameEntities(int direction) {
 
 	if (bat == null)
- 	   return;
+   return;
 
 	bat.erase();
-       	bat.move(direction);
+   bat.move(direction);
 
    }
 
 
    public boolean isOnBat (int x, int y) {
 	if (bat != null)
-      	   return bat.isOnBat(x, y);
+      return bat.isOnBat(x, y);
   	else
 	   return false;
    }

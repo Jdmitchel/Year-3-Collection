@@ -70,22 +70,22 @@ public class Bat {
       dimension = panel.getSize();
 
       if (direction == 1) {	// move left
-          x = x - dx;
-	  if (x < 0)
-	     x = 0;
+         x = x - dx;
+	   if (x < 0)
+	      x = 0;
       }
       else
       if (direction == 2) {  	// move right
-          x = x + dx;
-	  if (x + width > dimension.width)
-	     x = dimension.width - width;
+         x = x + dx;
+	   if (x + width > dimension.width)
+	      x = dimension.width - width;
       }
    }
 
 
    public boolean isOnBat (int x, int y) {
       if (bat == null)
-      	  return false;
+      	return false;
 
       return bat.contains(x, y);
    }

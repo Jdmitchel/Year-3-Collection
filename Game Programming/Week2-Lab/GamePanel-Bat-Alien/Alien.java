@@ -23,7 +23,7 @@ public class Alien extends Thread {
    private Color backgroundColour;
    private Dimension dimension;
 
-   bool isRunning;
+   private boolean isRunning;
 
    Random random;
 
@@ -31,8 +31,11 @@ public class Alien extends Thread {
       panel = p;
       dimension = panel.getSize();
       backgroundColour = panel.getBackground ();
+      random = new Random(500);
 
-      x = xPos;
+
+      // x = xPos;
+      x = random.nextInt(dimension.width-30-20);
       y = yPos;
       topY = yPos;
 	
@@ -94,10 +97,11 @@ public class Alien extends Thread {
 
       x = x + dx;
       y = y + dy;
- 
-      if (y > panelHeight)
-	  y = topY;		// regenerate alien at this y-coordinate
 
+      if (y > panelHeight){
+	      y = topY;	
+         x = random.nextInt(dimension.width-30);   // regenerate alien at this y-coordinate
+      }
    }
 
 
@@ -106,9 +110,9 @@ public class Alien extends Thread {
       isRunning = true;
 
       try {
-        while (isRunning) {
+         while (isRunning) {
             erase();
-	    move ();
+	         move();
             draw();
             sleep (100);	// increase value of sleep time to slow down ball
          }
@@ -119,7 +123,7 @@ public class Alien extends Thread {
 
    public boolean isOnHead (int x, int y) {
       if (head == null)
-      	  return false;
+      	return false;
 
       return head.contains(x, y);
    }

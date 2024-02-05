@@ -15,22 +15,21 @@ public class GamePanel extends JPanel {
 
 
    public void createGameEntities() {
- 
-     // write code to create an instance of the Alien class 
+   // write code to create an instance of the Alien class
+
 
    }
 
 
    public void drawGameEntities() {
-
-     // write code to draw the Alien instance (call its draw method)
+   // write code to draw the Alien instance (call its draw method)
 
    }
 
 
-  public void updateGameEntities() {
-      	if (alien != null) {
-
+   public void updateGameEntities() {
+      if (alien != null) {
+         //alien.move();
 	}
 
   }
@@ -43,7 +42,7 @@ public class GamePanel extends JPanel {
 
    public boolean isOnHead (int x, int y) {
 	if (alien != null)
-      		return alien.isOnHead(x, y);
+      return alien.isOnHead(x, y);
 	else
 		return false;
    }

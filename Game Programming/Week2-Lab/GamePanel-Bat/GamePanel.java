@@ -9,19 +9,18 @@ public class GamePanel extends JPanel {
    Bat bat;
 
    public GamePanel () {
-	bat = null;
+	   bat = null;
    }
 
 
    public void createGameEntities() {
-       bat = new Bat (this, 50, 350); 
+      bat = new Bat (this, 50, 350); 
    }
 
 
    public void drawGameEntities() {
-
-       if (bat != null)
-       	  bat.draw();
+      if (bat != null)
+         bat.draw();
    }
 
 
@@ -30,7 +29,8 @@ public class GamePanel extends JPanel {
 	if (bat == null)
  	   return;
 
-       	bat.move(direction);
+   bat.erase();
+   bat.move(direction);
 
    }
 

@@ -64,8 +64,8 @@ public class GameWindow extends JFrame
 		// create buttons
 
 		startB = new JButton ("Start");
-	        pauseB = new JButton ("Pause");
-	        focusB = new JButton ("Focus on Key");
+	    pauseB = new JButton ("Pause");
+	    focusB = new JButton ("Focus on Key");
 		exitB = new JButton ("Exit");
 
 		// add listener to each button (same as the current object)
@@ -87,7 +87,7 @@ public class GameWindow extends JFrame
 		// create the gamePanel for game entities
 
 		gamePanel = new GamePanel();
-        	gamePanel.setPreferredSize(new Dimension(400, 400));
+        gamePanel.setPreferredSize(new Dimension(400, 400));
 		gamePanel.createGameEntities();
 
 

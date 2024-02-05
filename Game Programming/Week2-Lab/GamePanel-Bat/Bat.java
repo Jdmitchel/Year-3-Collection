@@ -2,6 +2,7 @@ import java.awt.Dimension;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 import javax.swing.JPanel;
 
@@ -45,7 +46,7 @@ public class Bat {
       // Draw the head
       head = new Ellipse2D.Double(x+5, y+10, 100, 150);
       g2.draw(head);
- 
+
       // Draw the eyes
       Line2D.Double eye1 = new Line2D.Double(x+25, y+70, x+45, y+90);
       g2.draw(eye1);
@@ -67,13 +68,27 @@ public class Bat {
 
       if (!panel.isVisible ()) return;
       
+
       if (direction == 1) {	// move left
-          x = x - dx;
+         x = x - dx;
+         if(x < 0)
+            x = 0;
       }
       else
       if (direction == 2) {  	// move right
-          x = x + dx;
+         x = x + dx;
+         if(x>dimension.width-width)
+            x = dimension.width-width;
       }
+   }
+
+   public void erase(){
+      Graphics g = panel.getGraphics ();
+      Graphics2D g2 = (Graphics2D) g;
+      g2.setColor(backgroundColour);
+      g2.fill(bat);
+      g.dispose();
+   
    }
 
 

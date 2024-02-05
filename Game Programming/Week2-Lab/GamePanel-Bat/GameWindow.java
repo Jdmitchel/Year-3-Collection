@@ -2,11 +2,7 @@ import javax.swing.*;			// need this for GUI objects
 import java.awt.*;			// need this for Layout Managers
 import java.awt.event.*;		// need this to respond to GUI events
 	
-public class GameWindow extends JFrame 
-				implements ActionListener,
-					   KeyListener,
-					   MouseListener
-{
+public class GameWindow extends JFrame implements ActionListener, KeyListener,MouseListener{
 	// declare instance variables for user interface objects
 
 	// declare labels 
@@ -64,8 +60,8 @@ public class GameWindow extends JFrame
 		// create buttons
 
 		startB = new JButton ("Show Bat");
-	        pauseB = new JButton ("Pause");
-	        focusB = new JButton ("Focus on Key");
+	    pauseB = new JButton ("Pause");
+	    focusB = new JButton ("Focus on Key");
 		exitB = new JButton ("Exit");
 
 		// add listener to each button (same as the current object)
@@ -87,8 +83,7 @@ public class GameWindow extends JFrame
 		// create the gamePanel for game entities
 
 		gamePanel = new GamePanel();
-        	gamePanel.setPreferredSize(new Dimension(400, 400));
-		gamePanel.createGameEntities();
+        gamePanel.setPreferredSize(new Dimension(400, 400));
 
 
 		// create infoPanel
@@ -146,6 +141,7 @@ public class GameWindow extends JFrame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		setVisible(true);
+		gamePanel.createGameEntities();
 
 		// set status bar message
 
