@@ -26,7 +26,7 @@ public class GamePanel extends JPanel {
    }
 
    public void dropAlien(){
-      alien = new Alien(this, 50, 50);
+      alien = new Alien(this, 50, 50, bat);
       alien.start();
    }
 
