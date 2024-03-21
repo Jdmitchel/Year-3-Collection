@@ -29,8 +29,8 @@ public class Survivor {
         x = xpos;
         y = ypos;
 
-        width = 250;
-        height = 250;
+        width = 450;
+        height = 450;
 
         survivorImage = ImageManager.loadImage("image//survivor//stickman2.png");
         //sound = SoundManager.getInstance();
