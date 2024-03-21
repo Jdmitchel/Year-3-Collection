@@ -32,7 +32,7 @@ public class Survivor {
         width = 250;
         height = 250;
 
-        survivorImage = ImageManager.loadImage("image//survivor//stickman.png");
+        survivorImage = ImageManager.loadImage("image//survivor//stickman2.png");
         //sound = SoundManager.getInstance();
     }
 
