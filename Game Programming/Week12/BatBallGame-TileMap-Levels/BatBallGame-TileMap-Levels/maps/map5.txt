@@ -1,0 +1,51 @@
+# Map file for tile-based game
+# (Lines that start with '#' are comments)
+# The tiles are:
+#   (Space) Empty tile
+#   A..Z    Tiles A through Z [T Tree, G Ground, S Sand, K WetSand, W WATER, R Grass] [ M Moss]
+#   o       Deer
+#   !       Bear
+#   *       Boat
+#   c       Crash Site
+
+
+
+
+T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T G G G G G G S S S K W W W W W W W W W
+T R R R R R R R R R R R!R R R R R R R R T T R R R R R T R!R R R G G G G G G S S S K W W W W W W W W
+T R R R!R R R R R R R R R R R R R R R R T T R R R R R T R R R R R G G G G G G S S S K W W W W W W W
+T R R R R R R R R R R R R R R R R R!R R T T R R T T T T T T T T R R G G G G G G S S*S K W W W W W W
+T R R R R R R R R R R R R R R R R R R R T T R R T T R R R R T T R R R G G G G G G S S S K W W W W W
+T R R R R R R W W W W W W R R R R R R R T T R R T T R R R R R R R R R R G G G G G G S S S K W W W W
+T R R R R R W W W W W W W W R R R R R R T T R R T T R R R R R R R R R R R G G G G G G S S S K W W W
+T R R R R W W W W W W W W W W R R R R R T T R R T T R R R R T T R R R R R R G G G G G G S S S K W W 
+T R R R R W W W W W W W W W W R R R R R T T R R T T R R R R T T R R R R R R R G G G G G G S S S K W
+T R R R R R W W W W W W W W R R R R R R T T R R R R R R R R T T R R R R R R R R G G G G G G S S S K
+T R R R R R R W W W W W W R R R R R R R T T R R R R R R R R T T R R R R R R R R R R G G G G G S S S
+T R R R R R R R R R!R R R R R R R R R R T T R R T T T T T T T T T T T T T T T T T T T T T G G G S T
+T R R R R R R R R R R R R R R R R!R R R T T R R R R R R R R R R R R R R R R R R R R R R R T G G G T
+T R R R R R R R R R R R R R R R R R R R T T R R R R R R R R R R R R R R R R R R R R R R RoR T G G T
+T R R R R R R R R R R R R R R R R R R R T T R R R R R R R R!R R R R R R R T T R R R T T R R R T T T
+T R R R R R R R R R R R R R R R R R R R T T R R R R R R R R R R R R R R R T T R R R T T R R R R R T
+T T T T T R R T T T T T T T T T T T T T T T R R R R R R R R R R R R R R R T T R R R T T R R R R R T
+T W W W R R R T T W W W W S R G G G G G T T R R R R R R R R R R R R R R R T T R R R T T R R R R R T
+T W W R R R R T T W W W W S R GoG G G R R R R R R R R R R R R R R R R R R T T R R R T T R R R R R T
+T W MoR R R R T T W W W W S R G G G R R R R R R R R R R R R R R R R R R R T T R R R T T R R R R R T
+T M R R R R R T T T T T T T T T T T T T T T T T T T T T T T T T T T R R R T T R R R R R R R R!R R T
+T R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R T T R R R R R R R R R R T
+T R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R T T T T T T T R R R R R T
+T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T R R R T T R R R R R R R R R R T
+T R R R R R R R R R R T R R R R R R R R R R R R R T T R R R R R R R R R R T T R R1R R R R R R R M W
+T R R R R R RoR R R R T R R R R RoR R R R R R R R T T R R R R R R R R R R T T R R R R R R R R M W W
+T R R R W W W R R R R T R R R R R R R R R R R R R T T R R R R R R R R R R T T R R R R R R R M W W W
+T R R R W W W R R R R T R R R R R R R R R R R T T R R R R R R R R R R R R R R R R R R R R M W W W W
+T R R R R R R R R R R T R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R M W W W W W
+T R RoR R R R R R R R T R R R R R R R R R RoR R R T T R R T T R R R R R R R R R R R R M W W W W W W
+T R R R R R T T T T T T R R R R R T T R R R R R R T T R R R R R R T T R R T T T T T T T T T T T T T
+T T T T R R R R R R R R R R R R R T T R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R T
+T T T R R R R R R R R R R R R R R T T R R T T R R R R R R T T R R R R R R R R R W W W W R R RoR R T
+T T R R R R R R R R R T T R R R T T R R R T T T T R R R R T T R R T T R R R R W W W W W W R R R R T
+T R R R R R R R R R R T T T T T T R R R R R R R R T T R R R R R R R R R R R R R W W W W R R R R R T
+T R R RcR R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R R T
+T R R R R R R R R R R R R R R R R R R R R R R R R R R R R T T T T R R R R R R R R R R R R R R R R T
+T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T 

@@ -1,0 +1,54 @@
+# Map file for tile-based game
+# (Lines that start with '#' are comments)
+# The tiles are:
+#   (Space) Empty tile
+#   A..Z    Tiles A through Z [A Tree, C Ground, D Sand, G WetSand, E WATER, B Grass] [ F Moss]
+#   o       Deer
+#   !       Bear
+#   *       Boat
+#   c       Crash Site
+
+
+
+
+A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A C C C C C C D D D G E E E E E E E E E
+A B B B B B B B B B B B!B B B B B B B B A A B B B B B A B!B B B C C C C C C D D D G E E E E E E E E
+A B B B!B B B B B B B B B B B B B B B B A A B B B B B A B B B B B C C C C C C D D D G E E E E E E E
+A B B B B B B B B B B B B B B B B B!B B A A B B A A A A A A A A B B C C C C C C D D*D G E E E E E E
+A B B B B B B B B B B B B B B B B B B B A A B B A A B B B B A A B B B C C C C C C D D D G E E E E E
+A B B B B B B E E E E E E B B B B B B B A A B B A A B B B B B B B B B B C C C C C C D D D G E E E E
+A B B B B B E E E E E E E E B B B B B B A A B B A A B B B B B B B B B B B C C C C C C D D D G E E E
+A B B B B E E E E E E E E E E B B B B B A A B B A A B B B B A A B B B B B B C C C C C C D D D G E E 
+A B B B B E E E E E E E E E E B B B B B A A B B A A B B B B A A B B B B B B B C C C C C C D D D G E
+A B B B B B E E E E E E E E B B B B B B A A B B B B B B B B A A B B B B B B B B C C C C C C D D D G
+A B B B B B B E E E E E E B B B B B B B A A B B B B B B B B A A B B B B B B B B B B C C C C C D D D
+A B B B B B B B B B!B B B B B B B B B B A A B B A A A A A A A A A A A A A A A A A A A A A C C C D A
+A B B B B B B B B B B B B B B B B!B B B A A B B B B B B B B B B B B B B B B B B B B B B B A C C C A
+A B B B B B B B B B B B B B B B B B B B A A B B B B B B B B B B B B B B B B B B B B B B BoB A C C A
+A B B B B B B B B B B B B B B B B B B B A A B B B B B B B B!B B B B B B B A A B B B A A B B B A A A
+A B B B B B B B B B B B B B B B B B B B A A B B B B B B B B B B B B B B B A A B B B A A B B B B B A
+A A A A A B B A A A A A A A A A A A A A A A B B B B B B B B B B B B B B B A A B B B A A B B B B B A
+A E E E B B B A A E E E E D B C C C C C A A B B B B B B B B B B B B B B B A A B B B A A B B B B B A
+A E E B B B B A A E E E E D B CoC C C B B B B B B B B B B B B B B B B B B A A B B B A A B B B B B A
+A E FoB B B B A A E E E E D B C C C B B B B B B B B B B B B B B B B B B B A A B B B A A B B B B B A
+A F B B B B B A A A A A A A A A A A A A A A A A A A A A A A A A A A B B B A A B B B B B B B B!B B A
+A B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B A A B B B B B B B B B B A
+A B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B A A A A A A A B B B B B A
+A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A B B B A A B B B B B B B B B B A
+A B B B B B B B B B B A B B B B B B B B B B B B B A A B B B B B B B B B B A A B B!B B B B B B B F E
+A B B B B B BoB B B B A B B B B BoB B B B B B B B A A B B B B BoB B B B B A A B B B B B B B B F E E
+A B B B E E E B B B B A B B B B B B B B B B B B B A A B B B B B B B B B B A A B B B B B B B F E E E
+A B B B E E E B B B B A B B B B B B B B B B B A A B B B B B B B B B B B B B B B B B B B B F E E E E
+A B B B B B B B B B B A B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B F E E E E E
+A B BoB B B B B B B B A B B B B B B B B B BoB B B A A B B A A B B B B B B B B B B B B F E E E E E E
+A B B B B B A A A A A A B B B B B A A B B B B B B A A B B B B B B A A B B A A A A A A A A A A A A A
+A A A A B B B B B B B B B B B B B A A B B B B B B B B B B B B B B B B B B B B B B E E B B B B B B A
+A A A B B B B B B B B B B B B B B A A B B A A B B B B B B A A B B B B B B B B B E E E E B B BoB B A
+A B B B B B B B A A A A A A B B B B B B B B B B B B B B B A A A A B B B B B B B B B B B B B B B B A
+A B B B B B B B B B B B B B B B B B B B B B B B B B B B B A A A A B B B B B B B B B B B B B B B B A
+A B B A A A B B B B B B B B B B B B B B B B B B B B B B B A A A A B B B B B B B B B B B B B B A A A
+A B B B B B B B B B B A A B B B A A B B B A A A A B B B B A A B B A A B B A B E E E E E E B B B B A
+A B B B B B B B B B B A A A A A A B B B B B B B B A A B B B B B B B B B B A B B E E E E B B B B B A
+A B B BcB B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B B A B B B B B B B B B!B B A
+A B B B B B B B B B B B B B B B B B B B B B B B B B B B B A A A A B B B B A B B B B B B B B B B B A
+A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A 
