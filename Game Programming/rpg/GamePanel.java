@@ -28,6 +28,8 @@ public class GamePanel extends JPanel implements Runnable{
 
     // Player variables
     public Hunt player;
+    private TileMapManagerHelp tmm;
+    private TileMapHelp map;
 
     //FPS
     private int FPS = 60;
@@ -38,6 +40,14 @@ public GamePanel(){
     this.setFocusable(true);
     player = new Hunt(this, key);
 
+    tmm = new TileMapManagerHelp(this);
+    try {
+        String filename = "maps//map4.txt";
+        map = tmm.loadMap(filename);
+        System.out.println("Map loaded");
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
 }
 
 public void startGameThread(){
@@ -47,7 +57,16 @@ public void startGameThread(){
             public void run() {
                 requestFocusInWindow();
             }
-        }); 
+        });
+
+        tmm = new TileMapManagerHelp(this);
+        try{
+            String filename = "maps//map4.txt";
+            map = tmm.loadMap(filename);
+            System.out.println("Map loaded");
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 }
 
 
@@ -90,6 +109,16 @@ public void update(){
 public void paintComponent(Graphics g){
     super.paintComponent(g);  
     Graphics2D g2 = (Graphics2D) g;
+
+    //g2.setColor(Color.RED);
+    //g2.drawRect(player.screenX, player.screenY, player.width, player.height);
+
+    // Debug: Draw a bounding box around the tile map to visualize its position
+    g2.setColor(Color.PINK);
+    g2.drawRect(0, 0, map.getWidthPixels(), map.getHeightPixels());
+
+
+    map.draw(g2);
     player.draw(g2);
     g2.dispose();
 }
