@@ -12,13 +12,14 @@ import java.awt.geom.Rectangle2D;
 
 public class TileMapHelp {
 
-    private static final int TILE_SIZE = 16;
+    private static final int TILE_SIZE = 32;
     //private static final int TILE_SIZE_BITS = 6;
 
     private Image[][] tiles;
-    //private int screenWidth, screenHeight;
+    private int screenWidth, screenHeight;
     private int mapWidth, mapHeight;
-    //private int offsetY;
+    private int offsetY;
+    private int offsetX;
     private int x, y;
 
     private HashMap<Image, Integer> tileIndices = new HashMap<Image, Integer>();
@@ -31,17 +32,32 @@ public class TileMapHelp {
 
 	this.panel = panel;
 
-    //screenWidth = dimension.width;
-    //screenHeight = dimension.height;
+    dimension = panel.getPreferredSize();
+
+    screenWidth = dimension.width;
+    screenHeight = dimension.height;
 
     //System.out.println("Dimension: " + dimension);
-	//System.out.println ("Tile Map Width: " + screenWidth);
-	//System.out.println ("Tile Map Height: " + screenHeight);
+	System.out.println ("Tile Map Width: " + screenWidth);
+	System.out.println ("Tile Map Height: " + screenHeight);
 
 	mapWidth = maxScreenCol;
 	mapHeight = maxScreenRow;
         
     tiles = new Image[mapWidth][mapHeight];
+    offsetX = screenWidth - tilesToPixels(mapWidth);
+    offsetY = screenHeight - tilesToPixels(mapHeight);
+
+
+
+    }
+
+    public int getOffsetX() {
+        return offsetX;
+    }
+
+    public int getOffsetY() {
+        return offsetY;
     }
 
     //Gets the width of this TileMap (number of pixels across).
@@ -113,22 +129,33 @@ public class TileMapHelp {
 
     //Draws the specified TileMap.
     public void draw(Graphics2D g2) {
+        int mapWidthPixels = tilesToPixels(mapWidth);
+        int mapHeightPixels = tilesToPixels(mapHeight);
+    
+        int firstTileX = pixelsToTiles(-offsetX);
+        int lastTileX = firstTileX + pixelsToTiles(screenWidth) + 1;
+        lastTileX = Math.min(lastTileX, mapWidth);
+    
+        int firstTileY = pixelsToTiles(-offsetY);
+        int lastTileY = firstTileY + pixelsToTiles(screenHeight) + 1;
+        lastTileY = Math.min(lastTileY, mapHeight);
+    
         int worldCol = 0;
         int worldRow = 0;
         int centerX = panel.player.screenX / 2;
         int centerY = panel.player.screenY / 2;
-
+    
         while (worldCol < mapWidth && worldRow < mapHeight) {
-            Image image = getTile(worldCol, worldRow);
             int worldX = worldCol * TILE_SIZE;
             int worldY = worldRow * TILE_SIZE;
-            int screenX = worldX - panel.player.Worldx + centerX;
-            int screenY = worldY - panel.player.Worldy + centerY;
-
-            //if (image != null && worldX + panel.tileSize > panel.player.Worldx - panel.player.screenX && worldX  - panel.tileSize < panel.player.Worldx + panel.player.screenX && worldY + panel.tileSize > panel.player.Worldy - panel.player.screenY && worldY - panel.tileSize < panel.player.Worldy + panel.player.screenY) {
-                g2.drawImage(image, screenX, screenY, panel.tileSize, panel.tileSize, null);
-            //}
-
+            int screenCol = worldX - panel.player.Worldx + centerX;
+            int screenRow = worldY - panel.player.Worldy + centerY + offsetY;
+    
+            Image tile = tiles[worldCol][worldRow];
+        //if (image != null && worldX + panel.tileSize > panel.player.Worldx - panel.player.screenX && worldX  - panel.tileSize < panel.player.Worldx + panel.player.screenX && worldY + panel.tileSize > panel.player.Worldy - panel.player.screenY && worldY - panel.tileSize < panel.player.Worldy + panel.player.screenY) {
+            g2.drawImage(tile, screenCol, screenRow, null);
+        //}
+    
             worldCol++;
             if (worldCol == mapWidth) {
                 worldCol = 0;
@@ -136,6 +163,11 @@ public class TileMapHelp {
             }
         }
     }
+
+
+
+
+    
 
     public boolean collision(int x, int y) {
         if (x < 0 || x >= mapWidth || y < 0 || y >= mapHeight) {

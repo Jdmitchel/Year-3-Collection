@@ -41,8 +41,7 @@ public class GameWindow extends JFrame implements ActionListener{
         controlPanel.add(quit);
 
         gp = new GamePanel();
-        gp.setPreferredSize(new Dimension(1000, 700));
-        gp.setBackground(Color.WHITE);
+        //gp.setBackground(Color.BLUE);
 
         setLayout(new BorderLayout());
         add(gp, BorderLayout.CENTER);
