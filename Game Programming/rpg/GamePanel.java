@@ -6,60 +6,48 @@ import javax.swing.SwingUtilities;
 
 public class GamePanel extends JPanel implements Runnable{
     
-    final int originalSize = 16;
+    final int originalSize = 18;
     final int scale = 3;
 
-    final int maxScreenCol = 16;
-    final int maxScreenRow = 12;
+    final int maxScreenCol = 20;
+    final int maxScreenRow = 14;
     final int tileSize = originalSize * scale;
-    final int screenWidth = 1000;
-    final int screenHeight = 700;
+    final int screenWidth = maxScreenCol * tileSize;
+    final int screenHeight = maxScreenRow * tileSize; 
 
-    public  KeyHandler key = new KeyHandler();
+    private final KeyHandler key = new KeyHandler();
 
     Thread gameThread;
 
     // World variables
-    public final int worldCol = 42;
-    public final int worldRow = 50;
+    public final int worldCol = 74;
+    public final int worldRow = 55;
     public final int worldWidth = worldCol * tileSize;
     public final int worldHeight = worldRow * tileSize;
+    //private final int maxMap = 500;
 
 
     // Player variables
-    public Hunt player;
-    private TileMapManagerHelp tmm;
-    private TileMapHelp map;
+    public Hunt player = new Hunt(this, key);
+    public CollisionChecker cc = new CollisionChecker(this);
+    public TileMapManagerHelp tmm = new TileMapManagerHelp(this);
+    public Boat boat = new Boat(this);
+    //private TileMapHelp map;
 
     //FPS
     private int FPS = 60;
 
     public GamePanel(){
-        this.setPreferredSize(new Dimension(screenWidth, screenHeight));
+        this.setPreferredSize(new Dimension(getScreenWidth(), getScreenHeight()));
         System.out.println("Screen Width: " + screenWidth + " Screen Height: " + screenHeight);
         this.setDoubleBuffered(true);
         this.addKeyListener(key);
         this.setFocusable(true);
-        player = new Hunt(this, key);
-
-        tmm = new TileMapManagerHelp(this);
-        try {
-            String filename = "maps//map4.txt";
-            map = tmm.loadMap(filename);
-            System.out.println("Map loaded");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println("Get Screen Width: " + getScreenWidth() + " Get Screen Height: " + getScreenHeight());
+        System.out.println("Get World Width: " + getWorldWidth() + " Get World Height: " + getWorldHeight());
+        System.out.println("Get World Col: " + getWorldCol() + " Get World Row: " + getWorldRow());
+        //this.requestFocusInWindow();
     }
-
-    /* public void adjustTileMap(){
-        int numtilesWidth = screenWidth / tileSize;
-        int numtilesHeight = screenHeight / tileSize;
-
-        tileSize = Math.min(screenWidth / numtilesWidth, screenHeight / numtilesHeight);
-        screenWidth = numtilesWidth * tileSize;
-        screenHeight = numtilesHeight * tileSize;
-    } */
 
     public void startGameThread(){
             gameThread = new Thread(this);
@@ -67,18 +55,8 @@ public class GamePanel extends JPanel implements Runnable{
             SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
                     requestFocusInWindow();
-
-                    tmm = new TileMapManagerHelp(GamePanel.this);
-                    try{
-                        String filename = "maps//map4.txt";
-                        map = tmm.loadMap(filename);
-                        System.out.println("Map loaded");
-                    }catch(IOException e){
-                        e.printStackTrace();
-                    }
                 }
             });
-
     }
 
 
@@ -112,6 +90,10 @@ public class GamePanel extends JPanel implements Runnable{
         
     }
 
+    //public void gameSetup(){
+
+    //}
+
 
 
     public void update(){
@@ -122,17 +104,56 @@ public class GamePanel extends JPanel implements Runnable{
         super.paintComponent(g);  
         Graphics2D g2 = (Graphics2D) g;
 
-        //g2.setColor(Color.RED);
-        //g2.drawRect(player.screenX, player.screenY, player.width, player.height);
-
-        // Debug: Draw a bounding box around the tile map to visualize its position
-        g2.setColor(Color.PINK);
-        g2.drawRect(0, 0, map.getWidthPixels(), map.getHeightPixels());
-
-
-        map.draw(g2);
+        tmm.draw(g2);
+        boat.draw(g2);
         player.draw(g2);
         g2.dispose();
     }
+
+
+    public int getTileSize(){
+        return tileSize;
+    }
+
+    public int getScreenWidth(){
+        return screenWidth;
+    }
+
+    public int getScreenHeight(){
+        return screenHeight;
+    }
+
+    public int getWorldWidth(){
+        return worldWidth;
+    }
+
+    public int getWorldHeight(){
+        return worldHeight;
+    }
+
+    public int getWorldCol(){
+        return worldCol;
+    }
+
+    public int getWorldRow(){
+        return worldRow;
+    }
+
+    public int getScreenCol(){
+        return maxScreenCol;
+    }
+
+    public int getScreenRow(){
+        return maxScreenRow;
+    }
+
+    public KeyHandler getKeyHandler(){
+        return key;
+    }
+    
+    public Hunt getPlayer(){
+        return player;
+    }
+
 
 }

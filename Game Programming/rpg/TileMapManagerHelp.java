@@ -1,102 +1,122 @@
-import java.awt.*;
-import java.io.*;
-import java.util.ArrayList;
-import javax.swing.ImageIcon;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
+import javax.imageio.ImageIO;
 
-/**
-    The TileMapeManager class loads and manages tile Images and
-    "host" Sprites used in the game. Game Sprites are cloned from
-    "host" Sprites.
-*/
 public class TileMapManagerHelp {
+    private GamePanel gp;
+    public Tile[] tile;
+    public int map[][];
 
-    private ArrayList<Image> tiles;
-    private int currentMap = 0;
+    public TileMapManagerHelp(GamePanel gp){
+        this.gp = gp;
+        tile = new Tile[10];
+        map = new int[gp.getWorldCol()][gp.getWorldRow()];
+        getTileImage();
+        loadMap("maps//map2.txt");
+        }
+    
+    public void getTileImage(){
+        try{
+            tile[0] = new Tile();
+            tile[0].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_A.png"));
+            tile[0].setCollision(true);
 
-    private GamePanel panel;
+            tile[1] = new Tile();
+            tile[1].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_B.png"));
+            tile[1].setCollision(false);
 
-    public TileMapManagerHelp(GamePanel panel) {
-	    this.panel = panel;
-        loadTileImages();
+            tile[2] = new Tile();
+            tile[2].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_C.png"));
+            tile[2].setCollision(false);
+
+            tile[3] = new Tile();
+            tile[3].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_D.png"));
+            tile[3].setCollision(false);
+
+            tile[4] = new Tile();
+            tile[4].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_E.png"));
+            tile[4].setCollision(true);
+
+            tile[5] = new Tile();
+            tile[5].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_F.png"));
+            tile[5].setCollision(false);
+
+            tile[6] = new Tile();
+            tile[6].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_G.png"));
+            tile[6].setCollision(false);
+
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
     }
 
 
-    public TileMapHelp loadMap(String filename) throws IOException {
-        ArrayList<String> lines = new ArrayList<>();
-        int mapWidth = panel.worldWidth;
-        int mapHeight = panel.worldHeight;
+    public void loadMap(String filename){
+        try{
+            InputStream in = getClass().getResourceAsStream(filename);
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
 
-        System.out.println("map Width: " + mapWidth);
-        System.out.println("map Height: " + mapHeight);
+            int col = 0;
+            int row = 0;
 
-    
-        // Use try-with-resources to ensure BufferedReader is closed automatically
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                // Skip comments
-                if (!line.startsWith("#")) {
-                    lines.add(line);
-                    mapWidth = Math.max(mapWidth, line.length());
+            while(col < gp.getWorldCol() && row < gp.getWorldRow()){
+                String line = br.readLine();
+                
+                while(col < gp.getWorldCol()){
+                    String number[] = line.split(" ");
+                    int num = Integer.parseInt(number[col]);
+                    map[col][row] = num;
+
+                    //System.out.println("WorldCol: " + col + " WorldRow: " + row + " Tile: " + num + " WorldCol: " + gp.getWorldCol() + " WorldRow: " + gp.getWorldRow());
+
+                    col++;
+                }
+                if(col == gp.getWorldCol()){
+                    col = 0;
+                    row++;
                 }
             }
+            br.close();
         }
-    
-        // Parse the lines to create a TileMap
-        mapHeight = lines.size();
-        System.out.println("map height with lines: " + mapHeight);
-        TileMapHelp newMap = new TileMapHelp(panel, mapWidth, mapHeight);
-        for (int y = 0; y < mapHeight; y++) {
-            String line = lines.get(y);
-            for (int x = 0; x < line.length(); x++) {
-                char ch = line.charAt(x);
-
-                // Check if the char represents tile A, B, C, etc.
-                int tileIndex = ch - 'A';
-                if (tileIndex >= 0 && tileIndex < tiles.size()) {
-                    newMap.setTile(x, y, tiles.get(tileIndex));
-                } else {
-                    // If the character does not represent a tile, skip over it
-                    continue;
-                }
-                    // Additional logic for sprites can be added here
-            }
+        catch(IOException e){
+            e.printStackTrace();
         }
-    
-        return newMap;
     }
-    
 
-    // -----------------------------------------------------------
-    // code for loading sprites and images
-    // -----------------------------------------------------------
+    public void draw(Graphics2D g2){
+        int WorldCol = 0;
+        int WorldRow = 0;
 
+        while(WorldCol < gp.getWorldCol() && WorldRow < gp.getWorldRow()){
+            int tileIndex = map[WorldCol][WorldRow];
 
-    public void loadTileImages() {
-        // keep looking for tile A,B,C, etc. this makes it
-        // easy to drop new tiles in the images/ folder
+            int worldXvar = gp.tileSize * WorldCol;
+            int worldYvar = gp.tileSize * WorldRow;
+            int ScreenX = worldXvar - gp.player.Worldx + gp.player.screenX;
+            int ScreenY = worldYvar - gp.player.Worldy + gp.player.screenY;
 
-        File file;
-        System.out.println("loadTileImages called.");
+            if(worldXvar + gp.tileSize > gp.player.Worldx - gp.player.screenX &&
+                worldXvar - gp.tileSize < gp.player.Worldx + gp.player.screenX &&
+                worldYvar + gp.tileSize > gp.player.Worldy - gp.player.screenY &&
+                worldYvar - gp.tileSize < gp.player.Worldy + gp.player.screenY){
+                
+                g2.drawImage(tile[tileIndex].tileImage, ScreenX, ScreenY, gp.tileSize, gp.tileSize, null);
+            }
 
-        tiles = new ArrayList<Image>();
-        char ch = 'A';
-        while (true) {
-            String filename = "images//tiles//tile_" + ch + ".png";
-        file = new File(filename);
-        if (!file.exists()) {
-            System.out.println("Image file could not be opened: " + filename);
-            break;
-        } else {
-            System.out.println("Image file opened: " + filename);
-            Image tileImage = new ImageIcon(filename).getImage();
-            tiles.add(tileImage);
-            ch++;
+            WorldCol++;
+
+            if(WorldCol == gp.getWorldCol()){
+                WorldCol = 0;
+                WorldRow++;
             }
         }
     }
 
-
-
-}
+   }

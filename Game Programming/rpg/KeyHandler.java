@@ -8,17 +8,21 @@ public class KeyHandler implements KeyListener{
     
     public void keyPressed(KeyEvent e){
         int keyCode = e.getKeyCode();
-        if(keyCode == KeyEvent.VK_UP || keyCode == KeyEvent.VK_W){
+        if(keyCode == KeyEvent.VK_UP){
             up = true;
+            //System.out.println("Up key pressed");
         }
-        if(keyCode == KeyEvent.VK_DOWN || keyCode == KeyEvent.VK_S){
+        if(keyCode == KeyEvent.VK_DOWN){
             down = true;
+            //System.out.println("Down key pressed");
         }
-        if(keyCode == KeyEvent.VK_LEFT || keyCode == KeyEvent.VK_A){
+        if(keyCode == KeyEvent.VK_LEFT){
             left = true;
+            //System.out.println("Left key pressed");
         }
-        if(keyCode == KeyEvent.VK_RIGHT || keyCode == KeyEvent.VK_D){
+        if(keyCode == KeyEvent.VK_RIGHT){
             right = true;
+            //System.out.println("Right key pressed");
         }
     }
     
@@ -37,7 +41,7 @@ public class KeyHandler implements KeyListener{
             left = false;
         }
         if(keyCode == KeyEvent.VK_RIGHT){
-            System.out.println("Right key released");
+            //System.out.println("Right key released");
             right = false;
         }
     }
