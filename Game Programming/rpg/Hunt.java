@@ -12,6 +12,7 @@ public class Hunt extends Entities{
     public int screenX = 0;
     public  int screenY = 0;
 
+    public int hasKey = 0;
 
 
     public Hunt(GamePanel gp, KeyHandler key){
@@ -46,22 +47,26 @@ public class Hunt extends Entities{
 
     public void update(){
         boolean directionKeyPressed = false; // Flag to track if any direction key is pressed
-    
+
         if(key.up){
             direction = "up";
             directionKeyPressed = true;
+
         }
         if(key.down){
             direction = "down";
             directionKeyPressed = true;
+
         }
         if(key.left){
             direction = "left";
             directionKeyPressed = true;
+
         }
         if(key.right){
             direction = "right";
             directionKeyPressed = true;
+
         }
     
         // Only set to idle if no direction key is pressed
@@ -70,8 +75,9 @@ public class Hunt extends Entities{
         }
         
         // Tile Collision
-        gp.cc.checkTile(this);
         collision = false;
+        gp.cc.checkTile(this);
+        
 
         // Boat Collision
         int index = gp.cc.checkBoat(this, true);
@@ -90,6 +96,17 @@ public class Hunt extends Entities{
     }
 
     public void Interact(int index){
+        if(index !=99){
+            String object = gp.obj[index].getName();
+            switch(object){
+                case "Key":
+                    hasKey = 1;
+                    gp.obj[index] = null;
+                    System.out.println("Skull Key Collected");
+                    break;
+                // Further implementation of other objects and entities. If has Key and 5 bear entities and 2 deer entities killed, move to the next level.
+            }
+        }
 
     }
     

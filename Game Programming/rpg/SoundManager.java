@@ -17,14 +17,14 @@ public class SoundManager {
 
 
         // // Level 1 Tentative sounds
-        // clip = loadClip("sounds//background//beginnning.WAV");
-        // clips.put("intro", clip);
+        clip = loadClip("sounds//background//beginning.WAV");
+        clips.put("intro", clip);
 
-        // clip = loadClip("sounds//background//loop1.WAV");
-        // clips.put("level1_loop", clip);
+        clip = loadClip("sounds//background//loop1.WAV");
+        clips.put("level1_loop", clip);
 
-        // clip = loadClip("sounds//character//walking_grass.WAV");
-        // clips.put("walking1", clip);
+        //clip = loadClip("sounds//character//walking_grass.WAV");
+        //clips.put("walking1", clip);
 
         // clip = loadClip("sounds//character//walking_stone.WAV");
         // clips.put("walking2", clip);

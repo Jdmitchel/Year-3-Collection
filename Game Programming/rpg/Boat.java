@@ -37,8 +37,6 @@ public class Boat {
             g2.drawImage(img1, ScreenX, ScreenY, gp.tileSize * 2, gp.tileSize * 2, null);
             g2.setColor(Color.RED);
             g2.drawRect(ScreenX, ScreenY, gp.tileSize * 2, gp.tileSize * 2);
-            g2.setColor(Color.BLACK);
-            g2.drawRect(ScreenX, ScreenY, 50, 50);
         }
 
     }

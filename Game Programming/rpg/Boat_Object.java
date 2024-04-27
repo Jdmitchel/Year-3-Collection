@@ -10,8 +10,9 @@ public class Boat_Object extends Objects{
         //img2 = ImageManager.loadImage("images//boat//broken_boat.png");
         boundsX = 50;
         boundsY = 50;
-        name = "Boat";
         collision = true;
+        name = "Boat";
+
     }
 
 }

@@ -6,6 +6,7 @@ import javax.swing.SwingUtilities;
 
 public class GamePanel extends JPanel implements Runnable{
     
+    // Screen variables 
     final int originalSize = 18;
     final int scale = 3;
 
@@ -27,14 +28,16 @@ public class GamePanel extends JPanel implements Runnable{
     //private final int maxMap = 500;
 
 
+    // Sound variables
+    private SoundManager sm;
+
+
     // Player variables
     public Hunt player = new Hunt(this, key);
     public AssertObjects ao = new AssertObjects(this);
     public CollisionChecker cc = new CollisionChecker(this);
     public TileMapManagerHelp tmm = new TileMapManagerHelp(this);
-    //public Boat boat = new Boat(this);
     public Objects obj[] = new Objects[10];
-    //private TileMapHelp map;
 
     //FPS
     private int FPS = 60;
@@ -48,17 +51,18 @@ public class GamePanel extends JPanel implements Runnable{
         System.out.println("Get Screen Width: " + getScreenWidth() + " Get Screen Height: " + getScreenHeight());
         System.out.println("Get World Width: " + getWorldWidth() + " Get World Height: " + getWorldHeight());
         System.out.println("Get World Col: " + getWorldCol() + " Get World Row: " + getWorldRow());
-        //this.requestFocusInWindow();
+
+        sm = SoundManager.getInstance();
     }
 
     public void startGameThread(){
-            gameThread = new Thread(this);
-            gameThread.start();
-            SwingUtilities.invokeLater(new Runnable() {
-                public void run() {
-                    requestFocusInWindow();
-                }
-            });
+        gameThread = new Thread(this);
+        gameThread.start();
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                requestFocusInWindow();
+            }
+        });
     }
 
 
@@ -94,6 +98,8 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void gameSetup(){
         ao.setObjects();
+        sm.setVolume("level1_loop", 0.40f);
+        sm.playClip("level1_loop", true);
     }
 
 
@@ -163,5 +169,12 @@ public class GamePanel extends JPanel implements Runnable{
         return player;
     }
 
+    public int getOriginalSize(){
+        return originalSize;
+    }
+
+    public SoundManager getSoundManager(){
+        return sm;
+    }
 
 }
