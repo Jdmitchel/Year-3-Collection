@@ -68,9 +68,14 @@ public class Hunt extends Entities{
         if (!directionKeyPressed) {
             direction = "idle";
         }
-    
+        
+        // Tile Collision
         gp.cc.checkTile(this);
         collision = false;
+
+        // Boat Collision
+        int index = gp.cc.checkBoat(this, true);
+        Interact(index);
     
         if(collision == false){
             switch (direction) {
@@ -82,6 +87,10 @@ public class Hunt extends Entities{
         }
 
         //System.out.println("Worldx: " + Worldx + " Worldy: " + Worldy);
+    }
+
+    public void Interact(int index){
+
     }
     
 

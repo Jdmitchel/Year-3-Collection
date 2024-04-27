@@ -29,9 +29,11 @@ public class GamePanel extends JPanel implements Runnable{
 
     // Player variables
     public Hunt player = new Hunt(this, key);
+    public AssertObjects ao = new AssertObjects(this);
     public CollisionChecker cc = new CollisionChecker(this);
     public TileMapManagerHelp tmm = new TileMapManagerHelp(this);
-    public Boat boat = new Boat(this);
+    //public Boat boat = new Boat(this);
+    public Objects obj[] = new Objects[10];
     //private TileMapHelp map;
 
     //FPS
@@ -90,9 +92,9 @@ public class GamePanel extends JPanel implements Runnable{
         
     }
 
-    //public void gameSetup(){
-
-    //}
+    public void gameSetup(){
+        ao.setObjects();
+    }
 
 
 
@@ -103,9 +105,15 @@ public class GamePanel extends JPanel implements Runnable{
     public void paintComponent(Graphics g){
         super.paintComponent(g);  
         Graphics2D g2 = (Graphics2D) g;
-
         tmm.draw(g2);
-        boat.draw(g2);
+
+        for(int i = 0; i < obj.length; i++){
+            if(obj[i] != null){
+                obj[i].draw(g2, this);
+            }
+        }
+
+
         player.draw(g2);
         g2.dispose();
     }

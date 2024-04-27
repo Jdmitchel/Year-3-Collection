@@ -1,31 +1,19 @@
 import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Rectangle;
 
-public class Boat {
-    
-    private Image img1, img2;
+public class Objects {
+    public Image img1, img2;
     private GamePanel gp;
     public int Worldx, Worldy;
     public boolean collision = false;
     public Rectangle area = new Rectangle(10, 10, 100, 100);
-    public int boundsX, boundsY;
-    public int objective;
+    public int boundsX = 50, boundsY = 50;
+    public String name;
 
 
-    public Boat(GamePanel gp){
-        this.gp = gp;
-        img1 = ImageManager.loadImage("images//boat//broken_boat.png");
-        img2 = ImageManager.loadImage("images//boat//broken_boat.png");
-        // x = 41 , y = 6
-        Worldx = gp.getTileSize() * 48;
-        Worldy = gp.getTileSize() * 12;
-        collision = true;
-    }
-
-
-    public void draw(Graphics g2){
+    public void draw(Graphics2D g2, GamePanel gp){
         int ScreenX = Worldx - gp.player.Worldx + gp.player.screenX;
         int ScreenY = Worldy - gp.player.Worldy + gp.player.screenY;
 
@@ -40,15 +28,6 @@ public class Boat {
             g2.setColor(Color.BLACK);
             g2.drawRect(ScreenX, ScreenY, 50, 50);
         }
-
-    }
-
-    public void Mission(int Objective){
-
-    }
-
-    
-
-    
+    } 
 
 }

@@ -26,7 +26,7 @@ public class CollisionChecker {
                 tileIndex2 = gp.tmm.map[entityColLeft][entityRowTop];
                 if(gp.tmm.tile[tileIndex1].collision == true || gp.tmm.tile[tileIndex2].collision == true){
                     en.collision = true;
-                    //System.out.println("collision");
+                    System.out.println("collision up");
                 }
 
                 break;
@@ -36,7 +36,7 @@ public class CollisionChecker {
                 tileIndex2 = gp.tmm.map[entityColLeft][entityRowBottom];
                 if(gp.tmm.tile[tileIndex1].collision == true || gp.tmm.tile[tileIndex2].collision == true){
                     en.collision = true;
-                    //System.out.println("collision");
+                    System.out.println("collision down");
                 }    
 
                 break;
@@ -46,7 +46,7 @@ public class CollisionChecker {
                 tileIndex2 = gp.tmm.map[entityColLeft][entityRowBottom];
                 if(gp.tmm.tile[tileIndex1].collision == true || gp.tmm.tile[tileIndex2].collision == true){
                     en.collision = true;
-                    //System.out.println("collision");
+                    System.out.println("collision left");
                 }
                 break;
             case "right":
@@ -55,57 +55,83 @@ public class CollisionChecker {
                 tileIndex2 = gp.tmm.map[entityColRight][entityRowBottom];
                 if(gp.tmm.tile[tileIndex1].collision == true || gp.tmm.tile[tileIndex2].collision == true){
                     en.collision = true;
-                    //System.out.println("collision");
+                    System.out.println("collision right");
                 }
                 break;
         }
     }
 
     public int checkBoat(Entities en, boolean player){
-        if(gp.boat != null){
-            en.boundingBox.x = en.Worldx + en.boundingBox.x;
-            en.boundingBox.y = en.Worldy + en.boundingBox.y;
+        int index = 99;
+        for(int i = 0; i < gp.obj.length; i++){
+            if(gp.obj[i] != null){
+                en.boundingBox.x = en.Worldx + en.boundingBox.x;
+                en.boundingBox.y = en.Worldy + en.boundingBox.y;
 
-            gp.boat.area.x = gp.boat.Worldx + gp.boat.area.x;
-            gp.boat.area.y = gp.boat.Worldy + gp.boat.area.y;
+                gp.obj[i].area.x = gp.obj[i].Worldx + gp.obj[i].area.x;
+                gp.obj[i].area.y = gp.obj[i].Worldy + gp.obj[i].area.y;
 
-            switch (en.direction) {
-                case "up":
-                    if(en.boundingBox.intersects(gp.boat.area)){
-                        if(player){
-                            en.Worldy = gp.boat.Worldy + gp.getTileSize() * 2;
+                switch(en.direction){
+                    case "up":
+                        en.boundingBox.y -= en.speed;
+                        if(en.boundingBox.intersects(gp.obj[i].area)){
+                            System.out.println("up collision");
+                            if(gp.obj[i].collision == true){
+                                en.collision = true;
+                            }
+                            if(player){
+                                index = i;
+                            }
                         }
-                        return 1;
-                    }
-                    break;
-                case "down":
-                    if(en.boundingBox.intersects(gp.boat.area)){
-                        if(player){
-                            en.Worldy = gp.boat.Worldy - gp.getTileSize() * 2;
+                        break;
+                    case "down":
+                        en.boundingBox.y += en.speed;
+                        if(en.boundingBox.intersects(gp.obj[i].area)){
+                            System.out.println("down collision");
+                            if(gp.obj[i].collision == true){
+                                en.collision = true;
+                            }
+                            if(player){
+                                index = i;
+                            }
                         }
-                        return 1;
-                    }
-                    break;
-                case "left":
-                    if(en.boundingBox.intersects(gp.boat.area)){
-                        if(player){
-                            en.Worldx = gp.boat.Worldx + gp.getTileSize() * 2;
+                        break;
+                    case "left":
+                        en.boundingBox.x -= en.speed;
+                        if(en.boundingBox.intersects(gp.obj[i].area)){
+                            System.out.println("left collision");
+                            if(gp.obj[i].collision == true){
+                                en.collision = true;
+                            }
+                            if(player){
+                                index = i;
+                            }
                         }
-                        return 1;
-                    }
-                    break;
-                case "right":
-                    if(en.boundingBox.intersects(gp.boat.area)){
-                        if(player){
-                            en.Worldx = gp.boat.Worldx - gp.getTileSize() * 2;
+                        break;
+                    case "right":
+                        en.boundingBox.x += en.speed;
+                        if(en.boundingBox.intersects(gp.obj[i].area)){
+                            System.out.println("right collision");
+                            if(gp.obj[i].collision == true){
+                                en.collision = true;
+                            }
+                            if(player){
+                                index = i;
+                            }
+                            
                         }
-                        return 1;
+                        break;
                     }
-                    break;
+                en.boundingBox.x = en.boundsX;
+                en.boundingBox.y = en.boundsY;
+                gp.obj[i].area.x = gp.obj[i].boundsX;
+                gp.obj[i].area.y = gp.obj[i].boundsY;
+                }
                 
-            }
         }
-        return 0;
+        return index;
     }
-    
+        
 }
+    
+
