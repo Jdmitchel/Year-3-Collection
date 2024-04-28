@@ -11,6 +11,7 @@ public class Hunt extends Entities{
     private StripAnimation walking, idle;
     public int screenX = 0;
     public  int screenY = 0;
+    private int health = 10;
 
     public int hasKey = 0;
 
@@ -27,7 +28,7 @@ public class Hunt extends Entities{
         boundingBox.x = 10;
         boundingBox.y = 25;
         boundingBox.width = 30;
-        boundingBox.height = 40;
+        boundingBox.height = 25;
 
         boundsX = boundingBox.x;
         boundsY = boundingBox.y;
@@ -41,7 +42,7 @@ public class Hunt extends Entities{
     public void setDefaultValues(){
         Worldx = gp.getTileSize() * 15;
         Worldy = gp.getTileSize() * 45;
-        speed = 4;
+        speed = 16;
         direction = "idle";
     }
 
@@ -51,21 +52,24 @@ public class Hunt extends Entities{
         if(key.up){
             direction = "up";
             directionKeyPressed = true;
+            //gp.getSoundManager().playClip("walking1", false);
 
         }
         if(key.down){
             direction = "down";
             directionKeyPressed = true;
-
+            //gp.getSoundManager().playClip("walking1", false);
         }
         if(key.left){
             direction = "left";
             directionKeyPressed = true;
+            //gp.getSoundManager().playClip("walking1", false);
 
         }
         if(key.right){
             direction = "right";
             directionKeyPressed = true;
+            //gp.getSoundManager().playClip("walking1", false);
 
         }
     
@@ -102,9 +106,17 @@ public class Hunt extends Entities{
                 case "Key":
                     hasKey = 1;
                     gp.obj[index] = null;
-                    System.out.println("Skull Key Collected");
+                    gp.ui.showMessage("You have found the Skull key!");
                     break;
                 // Further implementation of other objects and entities. If has Key and 5 bear entities and 2 deer entities killed, move to the next level.
+                case "Boat":
+                    if(hasKey == 1){
+                        gp.ui.showMessage("You have escaped the island!");
+                    }
+                    else{
+                        gp.ui.showMessage("You need the Skull key to escape the island!");
+                    }
+                    break;
             }
         }
 
@@ -162,5 +174,11 @@ public class Hunt extends Entities{
         return screenY;
     }
     
-    
+    public int getHealth(){
+        return health;
+    }
+
+    public Image getImage(){
+        return image;
+    }
 }

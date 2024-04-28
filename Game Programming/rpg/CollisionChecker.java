@@ -26,7 +26,7 @@ public class CollisionChecker {
                 tileIndex2 = gp.tmm.map[entityColLeft][entityRowTop];
                 if(gp.tmm.tile[tileIndex1].collision == true || gp.tmm.tile[tileIndex2].collision == true){
                     en.collision = true;
-                    System.out.println("collision up");
+                    gp.getSoundManager().playClip("walking1", false);
                 }
 
                 break;
@@ -36,7 +36,7 @@ public class CollisionChecker {
                 tileIndex2 = gp.tmm.map[entityColLeft][entityRowBottom];
                 if(gp.tmm.tile[tileIndex1].collision == true || gp.tmm.tile[tileIndex2].collision == true){
                     en.collision = true;
-                    System.out.println("collision down");
+                    gp.getSoundManager().playClip("walking1", false);
                 }    
 
                 break;
@@ -46,7 +46,7 @@ public class CollisionChecker {
                 tileIndex2 = gp.tmm.map[entityColLeft][entityRowBottom];
                 if(gp.tmm.tile[tileIndex1].collision == true || gp.tmm.tile[tileIndex2].collision == true){
                     en.collision = true;
-                    System.out.println("collision left");
+                    gp.getSoundManager().playClip("walking1", false);
                 }
                 break;
             case "right":
@@ -55,7 +55,7 @@ public class CollisionChecker {
                 tileIndex2 = gp.tmm.map[entityColRight][entityRowBottom];
                 if(gp.tmm.tile[tileIndex1].collision == true || gp.tmm.tile[tileIndex2].collision == true){
                     en.collision = true;
-                    System.out.println("collision right");
+                    gp.getSoundManager().playClip("walking1", false);
                 }
                 break;
         }

@@ -39,6 +39,8 @@ public class GamePanel extends JPanel implements Runnable{
     public TileMapManagerHelp tmm = new TileMapManagerHelp(this);
     public Objects obj[] = new Objects[10];
 
+    public UI ui = new UI(this);
+
     //FPS
     private int FPS = 60;
 
@@ -98,7 +100,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void gameSetup(){
         ao.setObjects();
-        sm.setVolume("level1_loop", 0.40f);
+        sm.setVolume("level1_loop", 0.2f);
         sm.playClip("level1_loop", true);
     }
 
@@ -119,8 +121,8 @@ public class GamePanel extends JPanel implements Runnable{
             }
         }
 
-
         player.draw(g2);
+        ui.draw(g2);
         g2.dispose();
     }
 
