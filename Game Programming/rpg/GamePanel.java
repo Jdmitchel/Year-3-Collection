@@ -13,8 +13,8 @@ public class GamePanel extends JPanel implements Runnable{
     private final int maxScreenCol = 20;
     private final int maxScreenRow = 14;
     private final int tileSize = originalSize * scale;
-    private final int screenWidth = maxScreenCol * tileSize;
-    private final int screenHeight = maxScreenRow * tileSize; 
+    private final int screenWidth = 1000; //maxScreenCol * tileSize;
+    private final int screenHeight = 700; //maxScreenRow * tileSize;
 
     private final KeyHandler key = new KeyHandler(this);
 
@@ -127,7 +127,7 @@ public class GamePanel extends JPanel implements Runnable{
 
             for(int i = 0; i < hostile.length; i++){
                 if(hostile[i] != null){
-                    hostile[i].update();
+                    //hostile[i].update();
                 }
             }
 

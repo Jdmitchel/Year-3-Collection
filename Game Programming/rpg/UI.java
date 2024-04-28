@@ -33,10 +33,10 @@ public class UI {
         this.g2 = g2;
         g2.setFont(font);
         g2.setColor(Color.WHITE);
-        g2.drawString("Time: " + getTime(), 950, 20);
+        g2.drawString("Time: " + getTime(), 900, 20);
         image = gp.getPlayer().getImage();
         g2.drawImage(image, 940, 30, gp.getTileSize(), gp.getTileSize(), null);
-        g2.drawString(" X " + gp.getPlayer().getHealth(), 980, 70);
+        g2.drawString(" X " + gp.getPlayer().getHealth(), 900, 70);
 
         //Title Screen
         if(gp.gameState == gp.getMenuState()){
@@ -92,7 +92,7 @@ public class UI {
     public void drawDialogueScreen(){
         int x = gp.getTileSize() * 2;
         int y = gp.getTileSize() / 2;
-        int width = gp.getScreenWidth() - (gp.getTileSize() * 2);
+        int width = gp.getScreenWidth() - (gp.getTileSize() * 4);
         int height = gp.getTileSize() * 3;
 
         Window(x, y, width, height);
