@@ -8,7 +8,7 @@ import java.util.ArrayList;
 */
 public class Animation {
 
-    private GamePanel panel;					// JPanel on which animation is being displayed
+//    private GamePanel panel;					// JPanel on which animation is being displayed
     private ArrayList<AnimFrame> frames;			// collection of frames for animation
     private int currFrameIndex;					// current frame being displayed
     private long animTime;					// time that the animation has run for already
@@ -55,7 +55,7 @@ public class Animation {
         Terminates this animation.
     */
     public synchronized void stop() {
-	isActive = false;
+	isActive = true;
     }
 
 

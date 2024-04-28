@@ -5,6 +5,12 @@ import java.awt.event.KeyListener;
 public class KeyHandler implements KeyListener{
 
     public boolean up, down, left, right;
+    public boolean debugger = false;
+    private GamePanel gp;
+
+    public KeyHandler(GamePanel gp){
+        this.gp = gp;
+    }
     
     public void keyPressed(KeyEvent e){
         int keyCode = e.getKeyCode();
@@ -24,24 +30,39 @@ public class KeyHandler implements KeyListener{
             right = true;
             //System.out.println("Right key pressed");
         }
+        if(keyCode == KeyEvent.VK_L){
+            if(!debugger){
+                debugger = true;
+            }else{
+                debugger = false;
+            }
+        }
+        if(keyCode == KeyEvent.VK_P){
+            if(gp.gameState == gp.playState){
+                gp.gameState = gp.pauseState;
+            }else if(gp.gameState == gp.pauseState){
+                gp.gameState = gp.playState;
+            }
+        }
+        if(keyCode == KeyEvent.VK_ENTER){
+            if(gp.gameState == gp.dialoueState){
+                gp.gameState = gp.playState;
+            }
+        }
     }
     
     public void keyReleased(KeyEvent e){
         int keyCode = e.getKeyCode();
         if(keyCode == KeyEvent.VK_UP){
-            //System.out.println("Up key released");
             up = false;
         }
         if(keyCode == KeyEvent.VK_DOWN){
-            //System.out.println("Down key released");
             down = false;
         }
         if(keyCode == KeyEvent.VK_LEFT){
-            //System.out.println("Left key released");
             left = false;
         }
         if(keyCode == KeyEvent.VK_RIGHT){
-            //System.out.println("Right key released");
             right = false;
         }
     }

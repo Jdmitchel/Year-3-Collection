@@ -60,12 +60,12 @@ public class SoundManager {
         // clip = loadClip("sounds//transition//loop1.WAV");
         // clips.put("transition1", clip);
 
-        // clip = loadClip("sounds//transition//loop2.WAV");
-        // clips.put("transition2", clip);
+        clip = loadClip("sounds//transition//loop2.WAV");
+        clips.put("transition2", clip);
 
 
-        // clip = loadClip("sounds//transition//lvl2intro.WAV");
-        // clips.put("level2_intro", clip);
+        clip = loadClip("sounds//transition//lvl2intro.WAV");
+        clips.put("level2_intro", clip);
 
         // ====================================================
 

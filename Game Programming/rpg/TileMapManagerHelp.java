@@ -11,6 +11,7 @@ public class TileMapManagerHelp {
     private GamePanel gp;
     public Tile[] tile;
     public int map[][];
+    private util u = new util();
 
     public TileMapManagerHelp(GamePanel gp){
         this.gp = gp;
@@ -21,40 +22,28 @@ public class TileMapManagerHelp {
         }
     
     public void getTileImage(){
+        setUp(0, "images//tiles//l1//tile_A.png", true);
+        setUp(1, "images//tiles//l1//tile_B.png", false);
+        setUp(2, "images//tiles//l1//tile_C.png", false);
+        setUp(3, "images//tiles//l1//tile_D.png", false);
+        setUp(4, "images//tiles//l1//tile_E.png", true);
+        setUp(5, "images//tiles//l1//tile_F.png", false);
+        setUp(6, "images//tiles//l1//tile_G.png", false);
+
+    }
+
+    public void setUp(int index, String path, boolean collision){
         try{
-            tile[0] = new Tile();
-            tile[0].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_A.png"));
-            tile[0].setCollision(true);
+            tile[index] = new Tile();
+            tile[index].tileImage = ImageIO.read(getClass().getResourceAsStream(path));
+            tile[index].tileImage = u.scaledImage(tile[index].tileImage, gp.tileSize, gp.tileSize);
+            tile[index].setCollision(collision);
 
-            tile[1] = new Tile();
-            tile[1].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_B.png"));
-            tile[1].setCollision(false);
-
-            tile[2] = new Tile();
-            tile[2].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_C.png"));
-            tile[2].setCollision(false);
-
-            tile[3] = new Tile();
-            tile[3].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_D.png"));
-            tile[3].setCollision(false);
-
-            tile[4] = new Tile();
-            tile[4].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_E.png"));
-            tile[4].setCollision(true);
-
-            tile[5] = new Tile();
-            tile[5].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_F.png"));
-            tile[5].setCollision(false);
-
-            tile[6] = new Tile();
-            tile[6].tileImage = ImageIO.read(getClass().getResourceAsStream("images//tiles//tile_G.png"));
-            tile[6].setCollision(false);
 
         }
         catch(IOException e){
             e.printStackTrace();
         }
-
     }
 
 
@@ -107,7 +96,7 @@ public class TileMapManagerHelp {
                 worldYvar + gp.tileSize > gp.player.Worldy - gp.player.screenY &&
                 worldYvar - gp.tileSize < gp.player.Worldy + gp.player.screenY){
                 
-                g2.drawImage(tile[tileIndex].tileImage, ScreenX, ScreenY, gp.tileSize, gp.tileSize, null);
+                g2.drawImage(tile[tileIndex].tileImage, ScreenX, ScreenY, null);
             }
 
             WorldCol++;

@@ -16,7 +16,7 @@ public class GamePanel extends JPanel implements Runnable{
     final int screenWidth = maxScreenCol * tileSize;
     final int screenHeight = maxScreenRow * tileSize; 
 
-    private final KeyHandler key = new KeyHandler();
+    private final KeyHandler key = new KeyHandler(this);
 
     Thread gameThread;
 
@@ -31,6 +31,9 @@ public class GamePanel extends JPanel implements Runnable{
     // Sound variables
     private SoundManager sm;
 
+    // Image variables
+    private ImageManager im = new ImageManager();
+
 
     // Player variables
     public Hunt player = new Hunt(this, key);
@@ -39,7 +42,14 @@ public class GamePanel extends JPanel implements Runnable{
     public TileMapManagerHelp tmm = new TileMapManagerHelp(this);
     public Objects obj[] = new Objects[10];
 
+    // System variables
     public UI ui = new UI(this);
+    public int gameState;
+    public final int menuState = 0;
+    public final int playState = 1;
+    public final int pauseState = 2;
+    public final int gameOverState = 3;
+    public final int dialoueState = 4;
 
     //FPS
     private int FPS = 60;
@@ -90,7 +100,7 @@ public class GamePanel extends JPanel implements Runnable{
             }
 
             if(timer >= 1000000000){
-                System.out.println("FPS: " + frames);
+                //System.out.println("FPS: " + frames);
                 frames = 0;
                 timer = 0;
             }
@@ -102,27 +112,57 @@ public class GamePanel extends JPanel implements Runnable{
         ao.setObjects();
         sm.setVolume("level1_loop", 0.2f);
         sm.playClip("level1_loop", true);
+        gameState = 0;
     }
 
 
 
     public void update(){
-        player.update();
+        if(gameState == playState){
+            player.update();
+        }
+        if(gameState == pauseState){
+            // Pause
+        }
+        if(gameState == gameOverState){
+            // Game Over
+        }
+
     }
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);  
         Graphics2D g2 = (Graphics2D) g;
-        tmm.draw(g2);
 
-        for(int i = 0; i < obj.length; i++){
-            if(obj[i] != null){
-                obj[i].draw(g2, this);
-            }
+        long start = 0;
+        if(key.debugger == true){
+            start = System.nanoTime();
         }
 
-        player.draw(g2);
-        ui.draw(g2);
+        if(gameState == menuState){
+            ui.draw(g2);
+        }
+        else{
+            tmm.draw(g2);
+
+            for(int i = 0; i < obj.length; i++){
+                if(obj[i] != null){
+                    obj[i].draw(g2, this);
+                }
+            }
+    
+            player.draw(g2);
+            ui.draw(g2);
+        }
+
+        
+        if(key.debugger == true){
+            long elapsed = System.nanoTime() - start;
+            g2.setColor(Color.WHITE);
+            g2.drawString("FPS: " + (1000000000 / elapsed), 10, 10);
+            System.out.println("FPS: " + (1000000000 / elapsed));
+        }
+
         g2.dispose();
     }
 
@@ -177,6 +217,10 @@ public class GamePanel extends JPanel implements Runnable{
 
     public SoundManager getSoundManager(){
         return sm;
+    }
+
+    public ImageManager getImageManager(){
+        return im;
     }
 
 }

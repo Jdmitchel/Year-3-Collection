@@ -2,22 +2,21 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
 
 public class Hunt extends Entities{
 
-    private GamePanel gp;
+
     private KeyHandler key;
     private StripAnimation walking, idle;
     public int screenX = 0;
     public  int screenY = 0;
     private int health = 10;
-
     public int hasKey = 0;
 
 
     public Hunt(GamePanel gp, KeyHandler key){
-        this.gp = gp;
+        super(gp);
+
         this.key = key;
         screenX = (gp.getScreenWidth() / 2) - (gp.getTileSize() / 2);
         screenY = (gp.getScreenHeight()/ 2) - (gp.getTileSize() / 2);
@@ -25,10 +24,10 @@ public class Hunt extends Entities{
         Image();
 
         boundingBox = new Rectangle();
-        boundingBox.x = 10;
-        boundingBox.y = 25;
-        boundingBox.width = 30;
-        boundingBox.height = 25;
+        boundingBox.x = 50;
+        boundingBox.y = 75;
+        boundingBox.width = 15;
+        boundingBox.height = 20;
 
         boundsX = boundingBox.x;
         boundsY = boundingBox.y;
@@ -110,11 +109,16 @@ public class Hunt extends Entities{
                     break;
                 // Further implementation of other objects and entities. If has Key and 5 bear entities and 2 deer entities killed, move to the next level.
                 case "Boat":
+                    gp.gameState = gp.dialoueState;
                     if(hasKey == 1){
-                        gp.ui.showMessage("You have escaped the island!");
+                        //gp.ui.showMessage("You have escaped the island!");
+                        gp.getSoundManager().stopClip("level1_loop");
+                        gp.getSoundManager().playClip("level2_intro", false);
+
+                        //gp.ui.getLevelComplete();
                     }
                     else{
-                        gp.ui.showMessage("You need the Skull key to escape the island!");
+                        gp.ui.Mission = "The is broken. Return to the island and find the key.";
                     }
                     break;
             }
@@ -124,9 +128,8 @@ public class Hunt extends Entities{
     
 
     public void Image(){
-        walking = new StripAnimation("images//character//Walk.png", 7);
-        idle = new StripAnimation("images//character//Idle.png", 8);
-        image = ImageManager.loadImage("images//character//idleRight.gif");
+        walking = new StripAnimation("images//character//Walk.png", 7, 100);
+        idle = new StripAnimation("images//character//Idle.png", 8, 100);
     }
 
 
@@ -134,26 +137,26 @@ public class Hunt extends Entities{
     public void draw(Graphics2D g2d){
         /* g2d.setColor(Color.RED);
         g2d.fillRect(x, y, gp.tileSize, gp.tileSize); */
+        int size = gp.getTileSize() * 2;
 
-        /* if(direction == "up"){
-            walking.draw(g2d, screenX, screenY, gp.getTileSize(), gp.getTileSize());
+        // Draw the player
+        if(direction == "up"){
+            walking.draw(g2d, screenX, screenY, size, size);
         }
         else if(direction == "down"){
-            walking.draw(g2d, screenX, screenY, gp.getTileSize(), gp.getTileSize());
+            walking.draw(g2d, screenX, screenY,size, size);
         }
         else if(direction == "left"){
-            walking.draw(g2d, screenX, screenY, gp.getTileSize(), gp.getTileSize());
+            walking.draw(g2d, screenX, screenY,size, size);
         }
         else if(direction == "right"){
-            walking.draw(g2d, screenX, screenY, gp.getTileSize(), gp.getTileSize());
+            walking.draw(g2d, screenX, screenY,size, size);
         }
-        else{ */
-            g2d.drawImage(image, screenX, screenY, gp.getTileSize(), gp.getTileSize(), null);
-        //}
-
-        // draw a rectangle around the player
+        else{
+            idle.draw(g2d, screenX, screenY,size, size );
+        }
         g2d.setColor(Color.RED);
-        g2d.drawRect(screenX, screenY, gp.getTileSize(), gp.getTileSize());
+        g2d.drawRect(screenX, screenY, size, size);
 
     }
 
@@ -179,6 +182,6 @@ public class Hunt extends Entities{
     }
 
     public Image getImage(){
-        return image;
+        return idle.getImage();
     }
 }

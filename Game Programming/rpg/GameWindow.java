@@ -52,9 +52,11 @@ public class GameWindow extends JFrame implements ActionListener{
     }
 
     public void actionPerformed(ActionEvent e){
+            gp.gameSetup();
+
         if(e.getSource() == start){
             gameText.setText("Game Started");
-            gp.gameSetup();
+            gp.gameState = gp.playState;
             gp.startGameThread();
         }
         else if(e.getSource() == quit){

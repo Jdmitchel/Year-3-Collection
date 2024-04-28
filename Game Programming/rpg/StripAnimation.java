@@ -1,53 +1,54 @@
+import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 
-
-/**
-    The StripAnimation class creates an animation from a strip file.
-*/
 public class StripAnimation {
-	
-	private Animation animation;	// animation object
 
-	public StripAnimation(String fname, int numframes){
-		animation = new Animation(false);	// run animation once
-		Image stripImage = ImageManager.loadImage(fname);
+    private Animation animation;
 
-		int imageWidth = (int) stripImage.getWidth(null) / numframes;
-		int imageHeight = stripImage.getHeight(null);
+    private int x;      // x position of animation
+    private int y;      // y position of animation
+	private int width;  // width of animation
+	private int height; // height of animation
 
-		for (int i=0; i<numframes; i++) {
+    public StripAnimation(String imagePath, int frameCount, int frameDuration) {
+        animation = new Animation(false);  // run animation once
 
-			BufferedImage frameImage = new BufferedImage (imageWidth, imageHeight, BufferedImage.TYPE_INT_ARGB);
-			Graphics2D g = (Graphics2D) frameImage.getGraphics();
-	 
-			g.drawImage(stripImage, 
-					0, 0, imageWidth, imageHeight,
-					i*imageWidth, 0, (i*imageWidth)+imageWidth, imageHeight,
-					null);
-			
-			//animation.addFrame(frameImage, 200);
-		}
-	
+        // Load images from strip file
+        Image stripImage = ImageManager.loadImage(imagePath);
+
+        int imageWidth = stripImage.getWidth(null) / frameCount;
+        int imageHeight = stripImage.getHeight(null);
+
+        for (int i = 0; i < frameCount; i++) {
+            BufferedImage frameImage = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g = frameImage.createGraphics();
+
+            g.drawImage(stripImage,
+                    0, i * imageHeight, imageWidth*2, (i + 1) * imageHeight,
+                    0, i * imageHeight, imageWidth*2, (i + 1) * imageHeight,
+                    null);
+
+            g.dispose();
+            animation.addFrame(frameImage, frameDuration);
+        }
+    }
+
+    public void start() {
+        animation.start();
+    }
+
+    public void update() {
+        animation.update();
+    }
+
+    public void draw(Graphics2D g2, int x, int y, int width, int height) {
+		Image image = animation.getImage();
+		g2.drawImage(image, x, y, width, height, null);
 	}
 
-
-	public void update() {
-		animation.update();
+	public BufferedImage getImage() {
+		return (BufferedImage) animation.getImage();
 	}
 
-	public void draw(Graphics2D g2, int x, int y, int width, int height) {
-		if (!animation.isStillActive())
-			return;
-
-		g2.drawImage(animation.getImage(), x, y, width, height, null);
-	}
-
-
-	/* public void addFrame(BufferedImage frameImage, int i) {
-		animation.addFrame(frameImage, i);
-	} */
 }

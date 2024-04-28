@@ -3,8 +3,9 @@
 
 public class Boat_Object extends Objects{
 
-    public Boat_Object() {
+    private String dialogue;
 
+    public Boat_Object() {
 
         img1 = ImageManager.loadImage("images//boat//broken_boat.png");
         //img2 = ImageManager.loadImage("images//boat//broken_boat.png");
@@ -12,7 +13,7 @@ public class Boat_Object extends Objects{
         boundsY = 50;
         collision = true;
         name = "Boat";
-
     }
+
 
 }

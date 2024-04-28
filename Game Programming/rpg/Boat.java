@@ -12,6 +12,8 @@ public class Boat {
     public Rectangle area = new Rectangle(10, 10, 100, 100);
     public int boundsX, boundsY;
     public int objective;
+    public boolean missionComplete = false;
+    private String dialogue;
 
 
     public Boat(GamePanel gp){
@@ -44,6 +46,10 @@ public class Boat {
     public void Mission(int Objective){
 
     }
+
+    /* public void setDialogue(String dialogue){
+        gp.ui.setMessage(dialogue);
+    } */
 
     
 
