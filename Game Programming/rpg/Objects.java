@@ -19,14 +19,14 @@ public class Objects {
         int ScreenX = Worldx - gp.player.Worldx + gp.player.screenX;
         int ScreenY = Worldy - gp.player.Worldy + gp.player.screenY;
 
-        if(Worldx + gp.tileSize > gp.player.Worldx - gp.player.screenX &&
-            Worldx - gp.tileSize < gp.player.Worldx + gp.player.screenX &&
-            Worldy + gp.tileSize > gp.player.Worldy - gp.player.screenY &&
-            Worldy - gp.tileSize < gp.player.Worldy + gp.player.screenY){
+        if(Worldx + gp .getTileSize() > gp.player.Worldx - gp.player.screenX &&
+            Worldx - gp .getTileSize() < gp.player.Worldx + gp.player.screenX &&
+            Worldy + gp .getTileSize() > gp.player.Worldy - gp.player.screenY &&
+            Worldy - gp .getTileSize() < gp.player.Worldy + gp.player.screenY){
             
-            g2.drawImage(img1, ScreenX, ScreenY, gp.tileSize, gp.tileSize * 2, null);
+            g2.drawImage(img1, ScreenX, ScreenY, gp .getTileSize(), gp .getTileSize() * 2, null);
             /* g2.setColor(Color.RED);
-            g2.drawRect(ScreenX, ScreenY, gp.tileSize * 2, gp.tileSize * 2);
+            g2.drawRect(ScreenX, ScreenY, gp .getTileSize() * 2, gp .getTileSize() * 2);
             g2.setColor(Color.BLACK);
             g2.drawRect(ScreenX, ScreenY, 50, 50); */
         }

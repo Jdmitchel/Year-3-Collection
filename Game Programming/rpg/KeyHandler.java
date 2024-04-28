@@ -38,16 +38,19 @@ public class KeyHandler implements KeyListener{
             }
         }
         if(keyCode == KeyEvent.VK_P){
-            if(gp.gameState == gp.playState){
-                gp.gameState = gp.pauseState;
-            }else if(gp.gameState == gp.pauseState){
-                gp.gameState = gp.playState;
+            if(gp.gameState == gp.getPlayState()){
+                gp.gameState = gp .getPauseState();
+            }else if(gp.gameState == gp .getPauseState()){
+                gp.gameState = gp.getPlayState();
             }
         }
         if(keyCode == KeyEvent.VK_ENTER){
             if(gp.gameState == gp.dialoueState){
-                gp.gameState = gp.playState;
+                gp.gameState = gp.getPlayState();
             }
+        }
+        if(keyCode == KeyEvent.VK_SPACE){
+            //attack
         }
     }
     

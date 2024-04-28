@@ -7,24 +7,24 @@ import javax.swing.SwingUtilities;
 public class GamePanel extends JPanel implements Runnable{
     
     // Screen variables 
-    final int originalSize = 18;
-    final int scale = 3;
+    private final int originalSize = 18;
+    private final int scale = 3;
 
-    final int maxScreenCol = 20;
-    final int maxScreenRow = 14;
-    final int tileSize = originalSize * scale;
-    final int screenWidth = maxScreenCol * tileSize;
-    final int screenHeight = maxScreenRow * tileSize; 
+    private final int maxScreenCol = 20;
+    private final int maxScreenRow = 14;
+    private final int tileSize = originalSize * scale;
+    private final int screenWidth = maxScreenCol * tileSize;
+    private final int screenHeight = maxScreenRow * tileSize; 
 
     private final KeyHandler key = new KeyHandler(this);
 
     Thread gameThread;
 
     // World variables
-    public final int worldCol = 74;
-    public final int worldRow = 55;
-    public final int worldWidth = worldCol * tileSize;
-    public final int worldHeight = worldRow * tileSize;
+    private final int worldCol = 74;
+    private final int worldRow = 55;
+    private final int worldWidth = worldCol * tileSize;
+    private final int worldHeight = worldRow * tileSize;
     //private final int maxMap = 500;
 
 
@@ -41,13 +41,15 @@ public class GamePanel extends JPanel implements Runnable{
     public CollisionChecker cc = new CollisionChecker(this);
     public TileMapManagerHelp tmm = new TileMapManagerHelp(this);
     public Objects obj[] = new Objects[10];
+    public Entities hostile[] = new Entities[15]; 
+    public Entities neutral[] = new Entities[15];
 
     // System variables
     public UI ui = new UI(this);
     public int gameState;
-    public final int menuState = 0;
-    public final int playState = 1;
-    public final int pauseState = 2;
+    private final int menuState = 0;
+    private final int playState = 1;
+    private final int pauseState = 2;
     public final int gameOverState = 3;
     public final int dialoueState = 4;
 
@@ -110,6 +112,8 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void gameSetup(){
         ao.setObjects();
+        ao.setHostile();
+        ao.setNeutral();
         sm.setVolume("level1_loop", 0.2f);
         sm.playClip("level1_loop", true);
         gameState = 0;
@@ -120,7 +124,20 @@ public class GamePanel extends JPanel implements Runnable{
     public void update(){
         if(gameState == playState){
             player.update();
+
+            for(int i = 0; i < hostile.length; i++){
+                if(hostile[i] != null){
+                    hostile[i].update();
+                }
+            }
+
+            for(int i = 0; i < neutral.length; i++){
+                if(neutral[i] != null){
+                    //neutral[i].update();
+                } 
+            }
         }
+
         if(gameState == pauseState){
             // Pause
         }
@@ -148,6 +165,16 @@ public class GamePanel extends JPanel implements Runnable{
             for(int i = 0; i < obj.length; i++){
                 if(obj[i] != null){
                     obj[i].draw(g2, this);
+                }
+            }
+            for(int i = 0; i < hostile.length; i++){
+                if(hostile[i] != null){
+                    hostile[i].draw(g2);
+                }
+            }
+            for(int i = 0; i < neutral.length; i++){
+                if(neutral[i] != null){
+                    //neutral[i].draw(g2);
                 }
             }
     
@@ -223,4 +250,19 @@ public class GamePanel extends JPanel implements Runnable{
         return im;
     }
 
+    public int getGameState(){
+        return gameState;
+    }
+
+    public int getMenuState(){
+        return menuState;
+    }
+
+    public int getPlayState(){
+        return playState;
+    }
+
+    public int getPauseState(){
+        return pauseState;
+    }
 }

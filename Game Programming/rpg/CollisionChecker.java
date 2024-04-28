@@ -131,5 +131,102 @@ public class CollisionChecker {
         }
         return index;
     }
+
+    public int checkEntity(Entities en, Entities[] entity ){
+        int index = 99;
+        for(int i = 0; i < entity.length; i++){
+            if(entity[i] != null){
+                en.boundingBox.x = en.Worldx + en.boundingBox.x;
+                en.boundingBox.y = en.Worldy + en.boundingBox.y;
+
+                entity[i].boundingBox.x = entity[i].Worldx + entity[i].boundingBox.x;
+                entity[i].boundingBox.y = entity[i].Worldy + entity[i].boundingBox.y;
+
+                switch(en.direction){
+                    case "up":
+                        en.boundingBox.y -= en.speed;
+                        if(en.boundingBox.intersects(entity[i].boundingBox)){
+                            System.out.println("up enemy collision");
+                            en.collision = true;
+                            index = i;
+                        }
+                        break;
+                    case "down":
+                        en.boundingBox.y += en.speed;
+                        if(en.boundingBox.intersects(entity[i].boundingBox)){
+                            System.out.println("down enemy collision");
+                            en.collision = true;
+                            index = i;
+                        }
+                        break;
+                    case "left":
+                        en.boundingBox.x -= en.speed;
+                        if(en.boundingBox.intersects(entity[i].boundingBox)){
+                            System.out.println("left enemy collision");
+                            en.collision = true;
+                            index = i;
+                        }
+                        break;
+                    case "right":
+                        en.boundingBox.x += en.speed;
+                        if(en.boundingBox.intersects(entity[i].boundingBox)){
+                            System.out.println("right enemy collision");
+                            en.collision = true;
+                            index = i;
+                        }
+                        break;
+                    }
+                en.boundingBox.x = en.boundsX;
+                en.boundingBox.y = en.boundsY;
+                entity[i].boundingBox.x = entity[i].boundsX;
+                entity[i].boundingBox.y = entity[i].boundsY;
+                }
+                
+        }
+        return index;
+    }
+
+    public void checkPlayer(Entities en){
+        en.boundingBox.x = en.Worldx + en.boundingBox.x;
+        en.boundingBox.y = en.Worldy + en.boundingBox.y;
+
+        gp.player.boundingBox.x = gp.player.Worldx + gp.player.boundingBox.x;
+        gp.player.boundingBox.y = gp.player.Worldy + gp.player.boundingBox.y;
+
+        switch(en.direction){
+            case "up":
+                en.boundingBox.y -= en.speed;
+                if(en.boundingBox.intersects(gp.player.boundingBox)){
+                    System.out.println("up collision");
+                    en.collision = true;
+                }
+                break;
+            case "down":
+                en.boundingBox.y += en.speed;
+                if(en.boundingBox.intersects(gp.player.boundingBox)){
+                    System.out.println("down collision");
+                    en.collision = true;
+                }
+                break;
+            case "left":
+                en.boundingBox.x -= en.speed;
+                if(en.boundingBox.intersects(gp.player.boundingBox)){
+                    System.out.println("left collision");
+                    en.collision = true;
+                }
+                break;
+            case "right":
+                en.boundingBox.x += en.speed;
+                if(en.boundingBox.intersects(gp.player.boundingBox)){
+                    System.out.println("right collision");
+                    en.collision = true;
+                }
+                break;
+            }
+        en.boundingBox.x = en.boundsX;
+        en.boundingBox.y = en.boundsY;
+        gp.player.boundingBox.x = gp.player.boundsX;
+        gp.player.boundingBox.y = gp.player.boundsY;
+    }
         
 }

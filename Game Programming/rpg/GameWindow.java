@@ -56,7 +56,7 @@ public class GameWindow extends JFrame implements ActionListener{
 
         if(e.getSource() == start){
             gameText.setText("Game Started");
-            gp.gameState = gp.playState;
+            gp.gameState = gp.getPlayState();
             gp.startGameThread();
         }
         else if(e.getSource() == quit){

@@ -39,13 +39,13 @@ public class UI {
         g2.drawString(" X " + gp.getPlayer().getHealth(), 980, 70);
 
         //Title Screen
-        if(gp.gameState == gp.menuState){
+        if(gp.gameState == gp.getMenuState()){
             DrawMenuScreen();
         }
         
 
-        if(gp.gameState == gp.playState){}
-        if(gp.gameState == gp.pauseState){
+        if(gp.gameState == gp.getPlayState()){}
+        if(gp.gameState == gp .getPauseState()){
             drawPauseScreen();
         }
         if(gp.gameState == gp.gameOverState){

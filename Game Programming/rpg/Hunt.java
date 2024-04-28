@@ -7,7 +7,7 @@ public class Hunt extends Entities{
 
 
     private KeyHandler key;
-    private StripAnimation walking, idle;
+    private StripAnimation walking, idle, die, attack;
     public int screenX = 0;
     public  int screenY = 0;
     private int health = 10;
@@ -79,12 +79,14 @@ public class Hunt extends Entities{
         
         // Tile Collision
         collision = false;
-        gp.cc.checkTile(this);
-        
+        gp.cc.checkTile(this);        
 
         // Boat Collision
         int index = gp.cc.checkBoat(this, true);
         Interact(index);
+
+        int creatures = gp.cc.checkEntity(this, gp.hostile);
+        Battle(creatures);
     
         if(collision == false){
             switch (direction) {
@@ -96,6 +98,19 @@ public class Hunt extends Entities{
         }
 
         //System.out.println("Worldx: " + Worldx + " Worldy: " + Worldy);
+    }
+
+    public void Battle(int index){
+        if(index != 99){
+           /*  if(gp.hostile[index].health > 0){
+                gp.hostile[index].health -= 1;
+                gp.ui.showMessage("You have killed a creature!");
+            }
+            else{
+                gp.hostile[index] = null;
+                gp.ui.showMessage("You have killed a creature!");
+            } */
+        }
     }
 
     public void Interact(int index){
@@ -130,6 +145,8 @@ public class Hunt extends Entities{
     public void Image(){
         walking = new StripAnimation("images//character//Walk.png", 7, 100);
         idle = new StripAnimation("images//character//Idle.png", 8, 100);
+        die = new StripAnimation("images//character//dieNob.png", 5, 200);
+        attack = new StripAnimation("images//character//attackNob.png", 4, 100);
     }
 
 

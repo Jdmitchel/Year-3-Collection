@@ -36,7 +36,7 @@ public class TileMapManagerHelp {
         try{
             tile[index] = new Tile();
             tile[index].tileImage = ImageIO.read(getClass().getResourceAsStream(path));
-            tile[index].tileImage = u.scaledImage(tile[index].tileImage, gp.tileSize, gp.tileSize);
+            tile[index].tileImage = u.scaledImage(tile[index].tileImage, gp.getTileSize(), gp.getTileSize());
             tile[index].setCollision(collision);
 
 
@@ -86,15 +86,15 @@ public class TileMapManagerHelp {
         while(WorldCol < gp.getWorldCol() && WorldRow < gp.getWorldRow()){
             int tileIndex = map[WorldCol][WorldRow];
 
-            int worldXvar = gp.tileSize * WorldCol;
-            int worldYvar = gp.tileSize * WorldRow;
+            int worldXvar = gp. getTileSize() * WorldCol;
+            int worldYvar = gp. getTileSize() * WorldRow;
             int ScreenX = worldXvar - gp.player.Worldx + gp.player.screenX;
             int ScreenY = worldYvar - gp.player.Worldy + gp.player.screenY;
 
-            if(worldXvar + gp.tileSize > gp.player.Worldx - gp.player.screenX &&
-                worldXvar - gp.tileSize < gp.player.Worldx + gp.player.screenX &&
-                worldYvar + gp.tileSize > gp.player.Worldy - gp.player.screenY &&
-                worldYvar - gp.tileSize < gp.player.Worldy + gp.player.screenY){
+            if(worldXvar + gp. getTileSize() > gp.player.Worldx - gp.player.screenX &&
+                worldXvar - gp. getTileSize() < gp.player.Worldx + gp.player.screenX &&
+                worldYvar + gp. getTileSize() > gp.player.Worldy - gp.player.screenY &&
+                worldYvar - gp. getTileSize() < gp.player.Worldy + gp.player.screenY){
                 
                 g2.drawImage(tile[tileIndex].tileImage, ScreenX, ScreenY, null);
             }
