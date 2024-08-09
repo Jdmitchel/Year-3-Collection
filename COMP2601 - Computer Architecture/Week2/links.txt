@@ -1,0 +1,13 @@
+Karnaugh Maps: https://www.youtube.com/watch?v=RO5alU6PpSU
+Comparator Circuits: https://www.youtube.com/watch?v=BhUUmbz76P0
+Shift registers (parallel out): https://www.youtube.com/watch?v=vRBnZMJA0LY
+(serial out): https://www.youtube.com/watch?v=Ut2SjYuVBM0
+Synchronous Counter: https://www.youtube.com/watch?v=eiIV28LSQnM
+
+Additional:
+SR Latch: https://www.youtube.com/watch?v=-aQH0ybMd3U
+Flip Flops and Clock Cycles: https://www.youtube.com/watch?v=lrXjuotxqzE
+
+
+https://web.microsoftstream.com/video/b528db60-bf19-47e9-ab36-eb6bc17c7c6e
+

@@ -1,0 +1,11 @@
+Pipelining and latches: https://www.dauniv.ac.in/public/frontassets/coursematerial/computer-architecture/CompArchCh06L02PipeLinePerformance.pdf
+Latches: https://www.youtube.com/watch?v=uiBuEKZxIxA
+Pipelining and latches: http://web.iitd.ac.in/~shouri/eel201/tuts/pipeline_notes.pdf
+Latches: http://www2.cs.siu.edu/~cs401/Textbook/ch3.pdf (Read only what applies to this course)
+Latches, cycle stealing: http://mantravlsi.blogspot.com/2014/07/time-borrowing-and-time-stealing.html (just the beginning)
+
+Pipeline Processor Execution: https://www.youtube.com/watch?v=EW9vtuthFJY (very good explanation)
+General pipelining: https://www.youtube.com/watch?v=doJpguZFTe0
+
+
+
