@@ -1,0 +1,739 @@
+{
+    "key": "group_5cbdd1a0caf81",
+    "title": "Pricing Box",
+    "fields": [
+        {
+            "key": "field_5cc840c7667b5",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cbdd1cb5fd85",
+            "label": "Image",
+            "name": "acfb_pricingbox_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium_large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5cbdd3912af72",
+            "label": "Image Alt",
+            "name": "acfb_pricingbox_image_alt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "alt Text",
+            "placeholder": "alt Text",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cbdd2115fd86",
+            "label": "Title",
+            "name": "acfb_pricingbox_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Title",
+            "placeholder": "Title",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cbddc242af73",
+            "label": "Price Prefix",
+            "name": "acfb_pricingbox_price_prefix",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "$",
+            "placeholder": "$",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cbdd21c5fd87",
+            "label": "Price",
+            "name": "acfb_pricingbox_price",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 99,
+            "placeholder": ".99",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5cbddc552af74",
+            "label": "Price Suffix",
+            "name": "acfb_pricingbox_price_suffix",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ".99",
+            "placeholder": ".99",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cbee0f352a41",
+            "label": "Sub Text",
+            "name": "acfb_pricingbox_sub_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Sub Text Here",
+            "placeholder": "Sub Text Here",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cbdd25b5fd8a",
+            "label": "Description",
+            "name": "acfb_pricingbox_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Description goes here...",
+            "placeholder": "Description goes here...",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5cbdd2275fd88",
+            "label": "Button Text",
+            "name": "acfb_pricingbox_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Get Now",
+            "placeholder": "Get Now",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cbdd2445fd89",
+            "label": "Button Url",
+            "name": "acfb_pricingbox_button_url",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        },
+        {
+            "key": "field_5cc840de667b6",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaa89b79c384",
+            "label": "Typography",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaa8ae29c38c",
+            "label": "Title",
+            "name": "acfb_pricingbox_title_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 32,
+            "font_weight": 700,
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaa8aff9c38d",
+            "label": "Prefix",
+            "name": "acfb_pricingbox_prefix_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 22,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaa8b139c38e",
+            "label": "Price",
+            "name": "acfb_pricingbox_price_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 65,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaa8b279c38f",
+            "label": "Suffix",
+            "name": "acfb_pricingbox_suffix_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 28,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaa8b499c391",
+            "label": "Sub Text",
+            "name": "acfb_pricingbox_subtext_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 14,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaa8b689c393",
+            "label": "Description",
+            "name": "acfb_pricingbox_description_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 18,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaa8b489c390",
+            "label": "Button",
+            "name": "acfb_pricingbox_button_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 19,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaa89c39c385",
+            "label": "Colors",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cbedec77e229",
+            "label": "Background Color",
+            "name": "acfb_pricingbox_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#f3f4f5"
+        },
+        {
+            "key": "field_5cbedf427e22b",
+            "label": "Title Color",
+            "name": "acfb_pricingbox_title_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5cbedf8d7e22d",
+            "label": "Prefix Color",
+            "name": "acfb_pricingbox_prefix_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5cbee0017e22f",
+            "label": "Price Color",
+            "name": "acfb_pricingbox_price_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5cbee05a7e231",
+            "label": "Suffix Color",
+            "name": "acfb_pricingbox_suffix_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5cbee14952a42",
+            "label": "Sub Text Color",
+            "name": "acfb_pricingbox_subtext_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "rgba(25, 30, 35, 0.3)"
+        },
+        {
+            "key": "field_5cbee1a752a44",
+            "label": "Button Background Color",
+            "name": "acfb_pricingbox_button_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#e0e0e0"
+        },
+        {
+            "key": "field_5cbee26552a47",
+            "label": "Button Text Color",
+            "name": "acfb_pricingbox_button_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5cbee2bb52a49",
+            "label": "Button Background Hover Color",
+            "name": "acfb_pricingbox_button_background_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#e0e0e0"
+        },
+        {
+            "key": "field_5cbee28e52a48",
+            "label": "Button Text Hover Color",
+            "name": "acfb_pricingbox_button_text_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5cbee2f852a4a",
+            "label": "Description Color",
+            "name": "acfb_pricingbox_description_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5eaa89c99c386",
+            "label": "Sizing",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cbedef97e22a",
+            "label": "Image Size",
+            "name": "acfb_pricingbox_image_size",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 30,
+            "min": "",
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_5eaa89cf9c387",
+            "label": "Spacing",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaa8a519c388",
+            "label": "Margin",
+            "name": "acfb_pricingbox_margin",
+            "type": "margin",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "margin_enable": 0,
+            "margin_top": "",
+            "margin_right": "",
+            "margin_bottom": "",
+            "margin_left": ""
+        },
+        {
+            "key": "field_5eaa8a7a9c389",
+            "label": "Padding",
+            "name": "acfb_pricingbox_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": "",
+            "padding_right": "",
+            "padding_bottom": "",
+            "padding_left": ""
+        },
+        {
+            "key": "field_5eaa8aa89c38a",
+            "label": "Inner Padding",
+            "name": "acfb_pricingbox_inner_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": 60,
+            "padding_right": 35,
+            "padding_bottom": 60,
+            "padding_left": 35
+        },
+        {
+            "key": "field_5eaa8fea462c3",
+            "label": "Button Padding",
+            "name": "acfb_pricingbox_inner_button_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": 10,
+            "padding_right": 25,
+            "padding_bottom": 10,
+            "padding_left": 25
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acfb-pricingbox"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1588325824
+}

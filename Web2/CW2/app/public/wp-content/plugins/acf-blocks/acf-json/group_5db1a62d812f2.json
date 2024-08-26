@@ -1,0 +1,1599 @@
+{
+    "key": "group_5db1a62d812f2",
+    "title": "Posts Slider",
+    "fields": [
+        {
+            "key": "field_5db1a62e3b9b5",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db95c292e4aa",
+            "label": "Post Type",
+            "name": "acfb_post_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "post": "post",
+                "page": "page"
+            },
+            "default_value": [
+                0
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5df8adda4b399",
+            "label": "Number of Posts",
+            "name": "acfb_post_slider_nop",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 1,
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5db1a62e3c379",
+            "label": "Select a Layout",
+            "name": "acfb_post_slider_layout",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "acfb_post_slider_tiled": "Tiled",
+                "acfb_post_slider_card": "Card"
+            },
+            "allow_null": 0,
+            "default_value": "acfb_post_slider_tiled",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5db2e36714288",
+            "label": "Slides Per View",
+            "name": "acfb_post_slider_spv",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "min": 1,
+            "max": 6,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5db2e3a914289",
+            "label": "Gutter Space",
+            "name": "acfb_post_slider_gutter",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db2e36714288",
+                        "operator": ">",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 10,
+            "min": "",
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5db2e3d71428a",
+            "label": "Transition Effect",
+            "name": "acfb_post_slider_teffect",
+            "type": "select",
+            "instructions": "\"Fade\", \"Cube\" and \"3D Flip\" effects only works if the number of slides per view is set to 1.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "slide": "Slide",
+                "fade": "Fade",
+                "cube": "Cube",
+                "coverflow": "3D Coverflow",
+                "flip": "3D Flip"
+            },
+            "default_value": [
+                "slide"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5db2e4581428c",
+            "label": "Center Slide",
+            "name": "acfb_post_slider_centerslide",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db2e36714288",
+                        "operator": ">",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db2e4131428b",
+            "label": "Autoplay",
+            "name": "acfb_post_slider_autoplay",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db2e4851428d",
+            "label": "Slide Delay (seconds)",
+            "name": "acfb_post_slider_delay",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db2e4131428b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": "",
+            "max": 10,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5db2e50c14290",
+            "label": "Auto Height",
+            "name": "acfb_post_slider_autoheight",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db1a62e3cd3d",
+            "label": "Height",
+            "name": "acfb_post_slider_height",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db2e50c14290",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 250,
+            "min": "",
+            "max": 1000,
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_5db2e4ce1428e",
+            "label": "Arrow Control",
+            "name": "acfb_post_slider_arrow",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db2e4e61428f",
+            "label": "Dot Control",
+            "name": "acfb_post_slider_dots",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db1a62e41199",
+            "label": "Top Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db1a62e41b5d",
+            "label": "Top Elements Vertical Align",
+            "name": "acfb_post_slider_top_elements_v_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Top",
+                "center": "Center",
+                "flex-end": "Bottom"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5db1a62e42521",
+            "label": "Top Elements Horizontal Align",
+            "name": "acfb_post_slider_top_elements_h_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Left",
+                "center": "Center",
+                "flex-end": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5db1a62e42ee5",
+            "label": "Post Top Elements",
+            "name": "acfb_post_slider_top_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5db2f761749f5": {
+                    "key": "layout_5db2f761749f5",
+                    "name": "post_slider_image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_slider_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_slider_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_slider_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_slider_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5db1a63038174",
+            "label": "Top Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5db1a6304dd21",
+            "label": "Center Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db1a63064486",
+            "label": "Center Elements Vertical Align",
+            "name": "acfb_post_slider_center_elements_v_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Top",
+                "center": "Center",
+                "flex-end": "Bottom"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5db1a6318d121",
+            "label": "Center Elements Horizontal Align",
+            "name": "acfb_post_slider_center_elements_h_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Left",
+                "center": "Center",
+                "flex-end": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5db1a631ac911",
+            "label": "Post Center Elements",
+            "name": "acfb_post_slider_center_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5db2f78f749f6": {
+                    "key": "layout_5db2f78f749f6",
+                    "name": "post_slider_image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_slider_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_slider_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_slider_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_slider_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5db1a631dbb04",
+            "label": "Center Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5db1a6320361a",
+            "label": "Bottom Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db1a6321a167",
+            "label": "Bottom Elements Vertical Align",
+            "name": "acfb_post_slider_bottom_elements_v_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Top",
+                "center": "Center",
+                "flex-end": "Bottom"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5db1a63232fdd",
+            "label": "Bottom Elements Horizontal Align",
+            "name": "acfb_post_slider_bottom_elements_h_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Left",
+                "center": "Center",
+                "flex-end": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5db1a63246092",
+            "label": "Post Bottom Elements",
+            "name": "acfb_post_slider_bottom_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5db2f7a8749f7": {
+                    "key": "layout_5db2f7a8749f7",
+                    "name": "post_slider_image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_slider_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_slider_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_slider_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_slider_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5db1a63263559",
+            "label": "Bottom Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5db1a63280e07",
+            "label": "Title HTML Tag",
+            "name": "acfb_post_slider_title_html_tag",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6"
+            },
+            "allow_null": 0,
+            "default_value": "h3",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5db1a63297955",
+            "label": "Number of Posts",
+            "name": "acfb_post_slider_grid_number_of_posts",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a62e3c379",
+                        "operator": "==",
+                        "value": "slider_image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 1,
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5db1a632aaa09",
+            "label": "Columns",
+            "name": "acfb_posts_slider_columns",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a62e3c379",
+                        "operator": "==",
+                        "value": "slider_image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 2,
+            "max": 6,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5db1a632c210f",
+            "label": "Excerpt Length",
+            "name": "acfb_post_slider_excerpt_length",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 20,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5db1a632d51c3",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaac893383f2",
+            "label": "Typography",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaac91c383f9",
+            "label": "Title Custom Typography",
+            "name": "acfb_post_slider_title_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaac8bc383f5",
+            "label": "Title",
+            "name": "acfb_post_slider_title_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaac91c383f9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 25,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaac942383fa",
+            "label": "Meta Custom Typography",
+            "name": "acfb_post_slider_meta_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaac8d4383f6",
+            "label": "Meta",
+            "name": "acfb_post_slider_meta_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaac942383fa",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 16,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaac952383fb",
+            "label": "Excerpt Custom Typography",
+            "name": "acfb_post_slider_excerpt_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaac8de383f7",
+            "label": "Excerpt",
+            "name": "acfb_post_slider_excerpt_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaac952383fb",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 17,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaac967383fc",
+            "label": "Button Custom Typography",
+            "name": "acfb_post_slider_button_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaac900383f8",
+            "label": "Button",
+            "name": "acfb_post_slider_button_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaac967383fc",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 16,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaac89d383f3",
+            "label": "Colors",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db96dddfbbd2",
+            "label": "Overlay Color",
+            "name": "acfb_post_slider_tile_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a62e3c379",
+                        "operator": "==",
+                        "value": "acfb_post_slider_tiled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000000"
+        },
+        {
+            "key": "field_5df8b2dae0c6c",
+            "label": "Overlay Opacity",
+            "name": "acfb_post_slider_tile_overlay_opacity",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a62e3c379",
+                        "operator": "==",
+                        "value": "acfb_post_slider_tiled"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "0.5",
+            "min": "0.1",
+            "max": "0.9",
+            "step": "0.1",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5db2fa8d35ba4",
+            "label": "Background Color",
+            "name": "acfb_post_slider_bg_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a62e3c379",
+                        "operator": "==",
+                        "value": "acfb_post_slider_card"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#f3f4f5"
+        },
+        {
+            "key": "field_5db1a632ee421",
+            "label": "Title Custom Color",
+            "name": "acfb_post_slider_title_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db1a633147c7",
+            "label": "Title Color",
+            "name": "acfb_post_slider_title_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a632ee421",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5db1a6332787c",
+            "label": "Title Hover Color",
+            "name": "acfb_post_slider_title_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a632ee421",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5db1a633500f5",
+            "label": "Meta Custom Color",
+            "name": "acfb_post_slider_meta_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db1a63363592",
+            "label": "Meta Color",
+            "name": "acfb_post_slider_meta_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a633500f5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5db1a633b90be",
+            "label": "Excerpt Custom Color",
+            "name": "acfb_post_slider_excerpt_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db1a633d619d",
+            "label": "Excerpt Color",
+            "name": "acfb_post_slider_excerpt_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a633b90be",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5db1a6340a7d6",
+            "label": "Button Custom Color",
+            "name": "acfb_post_slider_button_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5db1a6341d88b",
+            "label": "Button Background Color",
+            "name": "acfb_post_slider_button_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a6340a7d6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5db1a63442a53",
+            "label": "Button Text Color",
+            "name": "acfb_post_slider_button_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a6340a7d6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5db1a63456aa8",
+            "label": "Button Background Hover Color",
+            "name": "acfb_post_slider_button_background_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a6340a7d6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5db1a6346c26d",
+            "label": "Button Text Hover Color",
+            "name": "acfb_post_slider_button_text_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db1a6340a7d6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5db9784c05f35",
+            "label": "Navigation Background Color",
+            "name": "acfb_post_slider_navigation_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5db978ad05f36",
+            "label": "Navigation Color",
+            "name": "acfb_post_slider_navigation_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5db978f505f37",
+            "label": "Pagination Active Color",
+            "name": "acfb_post_slider_pagination_active_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#007aff"
+        },
+        {
+            "key": "field_5db979a405f39",
+            "label": "Pagination Unactive Color",
+            "name": "acfb_post_slider_pagination_unactive_color_copy",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000000"
+        },
+        {
+            "key": "field_5eaac8a2383f4",
+            "label": "Spacing",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaac9fb383fd",
+            "label": "Margin",
+            "name": "acfb_post_slider_margin",
+            "type": "margin",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "margin_enable": 0,
+            "margin_top": "",
+            "margin_right": "",
+            "margin_bottom": "",
+            "margin_left": ""
+        },
+        {
+            "key": "field_5eaaca0f383ff",
+            "label": "Padding",
+            "name": "acfb_post_slider_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": 10,
+            "padding_right": 10,
+            "padding_bottom": 10,
+            "padding_left": 10
+        },
+        {
+            "key": "field_5eaaccf3c1596",
+            "label": "Inner Padding",
+            "name": "acfb_post_slider_inner_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": 20,
+            "padding_right": 20,
+            "padding_bottom": 20,
+            "padding_left": 20
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acfb-post-slider"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1588251927
+}

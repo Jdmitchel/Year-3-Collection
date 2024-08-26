@@ -1,0 +1,19 @@
+/*
+Theme Name: My Website Theme
+Theme URI: https://example.com/my-website-theme
+Author: Jardel Mitchell
+
+Description: First custom theme for my website
+Version: 1.0
+*/
+
+/* Add your custom styles here */
+
+body {
+    background-color: #d0abf6;
+    color: #203431;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}

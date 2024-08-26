@@ -1,0 +1,1399 @@
+{
+    "key": "group_5d9f3dcad2c3d",
+    "title": "Posts Tiled",
+    "fields": [
+        {
+            "key": "field_5d9f3dcb4663d",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db808ca13d14",
+            "label": "Post Type",
+            "name": "acfb_post_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "post": "post",
+                "page": "page"
+            },
+            "default_value": [
+                0
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d9f3dcb46a25",
+            "label": "Select a Layout",
+            "name": "acfb_post_tiled_layout",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "grid": "<span class=\"dashicons dashicons-screenoptions\"><\/span> Grid",
+                "collage": "<span class=\"dashicons dashicons-schedule\"><\/span> Collage"
+            },
+            "allow_null": 0,
+            "default_value": "grid",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5d9f3dcc4d7c0",
+            "label": "Number of Posts",
+            "name": "acfb_post_tiled_grid_number_of_posts",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcb46a25",
+                        "operator": "==",
+                        "value": "grid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 1,
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d9f3dcc5dd7c",
+            "label": "Columns",
+            "name": "acfb_posts_tiled_columns",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcb46a25",
+                        "operator": "==",
+                        "value": "grid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 2,
+            "max": 6,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5da0520beb8d1",
+            "label": "Height",
+            "name": "acfb_post_tiled_height",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 400,
+            "min": "",
+            "max": 1000,
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_5f05ac75bdf69",
+            "label": "Offset",
+            "name": "acfb_post_tiled_offset",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5da06ca0027d2",
+            "label": "Select Grid",
+            "name": "acfb_post_tiled_collage_grid",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcb46a25",
+                        "operator": "==",
+                        "value": "collage"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "3": "3",
+                "4": "4",
+                "5": "5"
+            },
+            "allow_null": 0,
+            "default_value": 3,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da07a9982cb1",
+            "label": "3 Grid Layouts",
+            "name": "acfb_post_tiled_collage_three_grid_layouts",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcb46a25",
+                        "operator": "==",
+                        "value": "collage"
+                    },
+                    {
+                        "field": "field_5da06ca0027d2",
+                        "operator": "==",
+                        "value": "3"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "acfb_radio_image",
+                "id": ""
+            },
+            "choices": {
+                "one": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gthree-three.png\" \/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "one",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5da07ab982cb2",
+            "label": "4 Grid Layouts",
+            "name": "acfb_post_tiled_collage_four_grid_layouts",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcb46a25",
+                        "operator": "==",
+                        "value": "collage"
+                    },
+                    {
+                        "field": "field_5da06ca0027d2",
+                        "operator": "==",
+                        "value": "4"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "acfb_radio_image",
+                "id": ""
+            },
+            "choices": {
+                "one": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/c-gfour-1.png\" \/>",
+                "two": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/c-gfour-2.png\" \/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "one",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5da07ad982cb3",
+            "label": "5 Grid Layouts",
+            "name": "acfb_post_tiled_collage_five_grid_layouts",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcb46a25",
+                        "operator": "==",
+                        "value": "collage"
+                    },
+                    {
+                        "field": "field_5da06ca0027d2",
+                        "operator": "==",
+                        "value": "5"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "acfb_radio_image",
+                "id": ""
+            },
+            "choices": {
+                "one": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/c-gfive-1.png\" \/>",
+                "two": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/c-gfive-2.png\" \/>",
+                "three": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/c-gfive-3.png\" \/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "one",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5da053e025113",
+            "label": "Top Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5da1873fa41e1",
+            "label": "Top Elements Vertical Align",
+            "name": "acfb_post_tiled_top_elements_v_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Top",
+                "center": "Center",
+                "flex-end": "Bottom"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da05ad8a5ec6",
+            "label": "Top Elements Horizontal Align",
+            "name": "acfb_post_tiled_top_elements_h_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Left",
+                "center": "Center",
+                "flex-end": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da0541b25115",
+            "label": "Post Top Elements",
+            "name": "acfb_post_tiled_top_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_tiled_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_tiled_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_tiled_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_tiled_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5da053f925114",
+            "label": "Top Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5da0547a25116",
+            "label": "Center Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5da1878aa41e2",
+            "label": "Center Elements Vertical Align",
+            "name": "acfb_post_tiled_center_elements_v_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Top",
+                "center": "Center",
+                "flex-end": "Bottom"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da05c0ada39b",
+            "label": "Center Elements Horizontal Align",
+            "name": "acfb_post_tiled_center_elements_h_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Left",
+                "center": "Center",
+                "flex-end": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da0549a25118",
+            "label": "Post Center Elements",
+            "name": "acfb_post_tiled_center_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_tiled_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_tiled_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_tiled_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_tiled_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5da0548625117",
+            "label": "Center Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5da054cd25119",
+            "label": "Bottom Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5da18805a41e3",
+            "label": "Bottom Elements Vertical Align",
+            "name": "acfb_post_tiled_bottom_elements_v_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Top",
+                "center": "Center",
+                "flex-end": "Bottom"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da05c33da39c",
+            "label": "Bottom Elements Horizontal Align",
+            "name": "acfb_post_tiled_bottom_elements_h_align",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "flex-start": "Left",
+                "center": "Center",
+                "flex-end": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "flex-start",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da054f52511b",
+            "label": "Post Bottom Elements",
+            "name": "acfb_post_tiled_bottom_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_tiled_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_tiled_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_tiled_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_tiled_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5da054e92511a",
+            "label": "Bottom Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5d9f3dcc37c13",
+            "label": "Title HTML Tag",
+            "name": "acfb_post_tiled_title_html_tag",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6"
+            },
+            "allow_null": 0,
+            "default_value": "h3",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5d9f3dcc70e30",
+            "label": "Excerpt Length",
+            "name": "acfb_post_tiled_excerpt_length",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 20,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5d9f3dcc869dd",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaac1c4af2ce",
+            "label": "Typography",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaac2d7af2d8",
+            "label": "Title Custom Typography",
+            "name": "acfb_post_tiled_title_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaac25caf2d4",
+            "label": "Title",
+            "name": "acfb_post_tiled_title_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaac2d7af2d8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 25,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaac2efaf2d9",
+            "label": "Meta Custom Typography",
+            "name": "acfb_post_tiled_meta_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaac275af2d5",
+            "label": "Meta",
+            "name": "acfb_post_tiled_meta_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaac2efaf2d9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 16,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaac301af2da",
+            "label": "Excerpt Custom Typography",
+            "name": "acfb_post_tiled_excerpt_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaac297af2d6",
+            "label": "Excerpt",
+            "name": "acfb_post_tiled_excerpt_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaac301af2da",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 17,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaac31daf2db",
+            "label": "Button Custom Typography",
+            "name": "acfb_post_tiled_button_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaac2a8af2d7",
+            "label": "Button",
+            "name": "acfb_post_tiled_button_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaac31daf2db",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 16,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaac1ceaf2cf",
+            "label": "Colors",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db9820b39c34",
+            "label": "Overlay Color",
+            "name": "acfb_post_tiled_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#000000"
+        },
+        {
+            "key": "field_5df89ce0e922c",
+            "label": "Overlay Opacity",
+            "name": "acfb_post_tiled_overlay_opacity",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "0.5",
+            "min": "0.1",
+            "max": "0.9",
+            "step": ".1",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d9f3dccb30d8",
+            "label": "Title Custom Color",
+            "name": "acfb_post_tiled_title_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d9f3dcce038a",
+            "label": "Title Color",
+            "name": "acfb_post_tiled_title_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dccb30d8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5d9f3dcd10373",
+            "label": "Title Hover Color",
+            "name": "acfb_post_tiled_title_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dccb30d8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5d9f3dcdc4e3d",
+            "label": "Meta Custom Color",
+            "name": "acfb_post_tiled_meta_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d9f3dcdd53f9",
+            "label": "Meta Color",
+            "name": "acfb_post_tiled_meta_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcdc4e3d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5d9f3dcee0fb5",
+            "label": "Excerpt Custom Color",
+            "name": "acfb_post_tiled_excerpt_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d9f3dcef4069",
+            "label": "Excerpt Color",
+            "name": "acfb_post_tiled_excerpt_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcee0fb5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5d9f3dcf25f92",
+            "label": "Button Custom Color",
+            "name": "acfb_post_tiled_button_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d9f3dcf38c5e",
+            "label": "Button Background Color",
+            "name": "acfb_post_tiled_button_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcf25f92",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5d9f3dcf5f597",
+            "label": "Button Text Color",
+            "name": "acfb_post_tiled_button_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcf25f92",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5d9f3dcf6ef9b",
+            "label": "Button Background Hover Color",
+            "name": "acfb_post_tiled_button_background_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcf25f92",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5d9f3dcf7f557",
+            "label": "Button Text Hover Color",
+            "name": "acfb_post_tiled_button_text_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d9f3dcf25f92",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#ffffff"
+        },
+        {
+            "key": "field_5eaac1ddaf2d1",
+            "label": "Spacing",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaac20aaf2d2",
+            "label": "Margin",
+            "name": "acfb_post_tiled_margin",
+            "type": "margin",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "margin_enable": 0,
+            "margin_top": 0,
+            "margin_right": 0,
+            "margin_bottom": 0,
+            "margin_left": 0
+        },
+        {
+            "key": "field_5eaac237af2d3",
+            "label": "Padding",
+            "name": "acfb_post_tiled_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0
+        },
+        {
+            "key": "field_5eaac64a5d468",
+            "label": "Inner Padding",
+            "name": "acfb_post_tiled_inner_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": 15,
+            "padding_right": 15,
+            "padding_bottom": 15,
+            "padding_left": 15
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acfb-post-tiled"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1594207382
+}

@@ -1,0 +1,368 @@
+{
+    "key": "group_5cbef16c004be",
+    "title": "Photo Collage",
+    "fields": [
+        {
+            "key": "field_5cda7f02e757b",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cd9575b1dc17",
+            "label": "Select Grid",
+            "name": "select_grid",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "2",
+                "3": "3",
+                "4": "4"
+            },
+            "allow_null": 0,
+            "default_value": 2,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5cda7f5de757d",
+            "label": "2 Grid Layouts",
+            "name": "2_grid_layouts",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cd9575b1dc17",
+                        "operator": "==",
+                        "value": "2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "acfb_radio_image",
+                "id": ""
+            },
+            "choices": {
+                "one": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gtwo-one.png\" \/>",
+                "two": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gtwo-two.png\" \/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "one",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5cdaa7c03c512",
+            "label": "3 Grid Layouts",
+            "name": "3_grid_layouts",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cd9575b1dc17",
+                        "operator": "==",
+                        "value": "3"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "acfb_radio_image",
+                "id": ""
+            },
+            "choices": {
+                "one": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gthree-one.png\" \/>",
+                "two": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gthree-two.png\" \/>",
+                "three": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gthree-three.png\" \/>",
+                "four": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gthree-four.png\" \/>",
+                "five": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gthree-five.png\" \/>",
+                "six": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gthree-six.png\" \/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "one",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5cdaa9ebd0c00",
+            "label": "4 Grid Layouts",
+            "name": "4_grid_layouts",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cd9575b1dc17",
+                        "operator": "==",
+                        "value": "4"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "acfb_radio_image",
+                "id": ""
+            },
+            "choices": {
+                "one": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-one.png\" \/>",
+                "two": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-two.png\" \/>",
+                "three": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-three.png\" \/>",
+                "four": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-four.png\" \/>",
+                "five": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-five.png\" \/>",
+                "six": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-six.png\" \/>",
+                "seven": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-seven.png\" \/>",
+                "eight": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-eight.png\" \/>",
+                "nine": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-nine.png\" \/>",
+                "ten": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-ten.png\" \/>",
+                "eleven": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-eleven.png\" \/>",
+                "twelve": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-twelve.png\" \/>",
+                "thirteen": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-thirteen.png\" \/>",
+                "fourteen": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-fourteen.png\" \/>",
+                "fifteen": "<img src=\"http:\/\/localhost\/acf\/wp-content\/plugins\/acf-blocks\/img\/gfour-fifteen.png\" \/>"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "one",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5cbf04c294875",
+            "label": "Images",
+            "name": "acfb_photo_collage_images",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 2,
+            "max": 4,
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_5cda7f2de757c",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaa9ad6c8be6",
+            "label": "Sizing",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cc85dee4e368",
+            "label": "Width",
+            "name": "acfb_photo_collage_layout_width",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": "",
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_5cda77ca5ecee",
+            "label": "Height",
+            "name": "acfb_photo_collage_layout_height",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 500,
+            "min": "",
+            "max": 1000,
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_5eaa9adec8be7",
+            "label": "Spacing",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaa9b08c8be8",
+            "label": "Margin",
+            "name": "acfb_photo_collage_margin",
+            "type": "margin",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "margin_enable": 0,
+            "margin_top": "",
+            "margin_right": "",
+            "margin_bottom": "",
+            "margin_left": ""
+        },
+        {
+            "key": "field_5eaa9b15c8be9",
+            "label": "Padding",
+            "name": "acfb_photo_collage_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": "",
+            "padding_right": "",
+            "padding_bottom": "",
+            "padding_left": ""
+        },
+        {
+            "key": "field_5eaa9b3bc8bea",
+            "label": "Other Setting",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cc85e1b4e369",
+            "label": "Gutter Space",
+            "name": "acfb_photo_collage_layout_gutter_space",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 10,
+            "min": "",
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": "px"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acfb-photocollage"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1588239195
+}

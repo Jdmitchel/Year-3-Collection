@@ -1,0 +1,12 @@
+Practice Questions
+
+    Define cloud computing and explain its significance in the current IT landscape.
+    Explore the evolution of cloud computing types (public, private, hybrid, multicloud) and how their definitions have changed over time.
+    Discuss the key characteristics that distinguish public clouds from private clouds.
+    Examine the role of resource allocation, use agreements, and management in defining public clouds.
+    Provide examples of companies that offer public clouds and discuss the factors that contribute to their popularity.
+    Explain the underlying technologies that enable the functioning of public clouds and their integration with existing IT infrastructure.
+    Compare and contrast the traditional and modern approaches to building hybrid clouds, emphasizing the role of application portability.
+    Explore the benefits and challenges of private clouds, emphasizing their role in meeting specific industry regulations and compliance requirements.
+    Discuss the importance of software-defined storage in private clouds, using Ceph as an example.
+    Examine the reasons behind the emergence of multicloud environments, considering factors such as Shadow IT, flexibility, proximity, and failover.

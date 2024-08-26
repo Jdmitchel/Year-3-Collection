@@ -1,0 +1,1686 @@
+{
+    "key": "group_5da1986955b15",
+    "title": "Posts Timeline",
+    "fields": [
+        {
+            "key": "field_5da1986c35431",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5da6f567787c1",
+            "label": "Post Type",
+            "name": "acfb_post_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "post": "post",
+                "page": "page"
+            },
+            "default_value": [
+                0
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5da19870502cc",
+            "label": "Number of Posts",
+            "name": "acfb_post_timeline_number_of_posts",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 1,
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5da1986c35819",
+            "label": "Select a Layout",
+            "name": "acfb_post_timeline_layout",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "acfb_post_timeline_left": "Left",
+                "acfb_post_timeline_center": "Center",
+                "acfb_post_timeline_right": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "acfb_post_timeline_center",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da1986c3775a",
+            "label": "Top Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5da1986c38312",
+            "label": "Post Top Elements",
+            "name": "acfb_post_timeline_top_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5da1c097d94b5": {
+                    "key": "layout_5da1c097d94b5",
+                    "name": "post_timeline_image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_timeline_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_timeline_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_timeline_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_timeline_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5da1986e442ef",
+            "label": "Top Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5da1986e57f5c",
+            "label": "Center Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5da1986e8b7a0",
+            "label": "Post Center Elements",
+            "name": "acfb_post_timeline_center_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5da1c0bfd94b6": {
+                    "key": "layout_5da1c0bfd94b6",
+                    "name": "post_timeline_image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_timeline_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_timeline_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_timeline_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_timeline_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5da1986f479d9",
+            "label": "Center Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5da1986f748a4",
+            "label": "Bottom Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5da1986fc460e",
+            "label": "Post Bottom Elements",
+            "name": "acfb_post_timeline_bottom_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5da1c0f7d94b7": {
+                    "key": "layout_5da1c0f7d94b7",
+                    "name": "post_timeline_image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_timeline_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_timeline_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_timeline_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_timeline_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5da1986feb717",
+            "label": "Bottom Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5da1ca3008f75",
+            "label": "Opposite Elements",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5da1ca5808f77",
+            "label": "Post Opposite Elements",
+            "name": "acfb_post_timeline_opposite_elements",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5da1c0f7d94b7": {
+                    "key": "layout_5da1c0f7d94b7",
+                    "name": "post_timeline_image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e15f431ae": {
+                    "key": "layout_5cd3e15f431ae",
+                    "name": "post_timeline_title",
+                    "label": "Title",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd40088e4c2e": {
+                    "key": "layout_5cd40088e4c2e",
+                    "name": "post_timeline_meta_data",
+                    "label": "Meta Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3e2cb3fc27": {
+                    "key": "layout_5cd3e2cb3fc27",
+                    "name": "post_timeline_content",
+                    "label": "Content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                },
+                "layout_5cd3fc02f65a2": {
+                    "key": "layout_5cd3fc02f65a2",
+                    "name": "post_timeline_read_more_button",
+                    "label": "Post Read More Button",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "1",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Post Element",
+            "min": "",
+            "max": ""
+        },
+        {
+            "key": "field_5da1ca4908f76",
+            "label": "Opposite Elements End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_5da1987016cc7",
+            "label": "Title HTML Tag",
+            "name": "acfb_post_timeline_title_html_tag",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6"
+            },
+            "allow_null": 0,
+            "default_value": "h3",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5da19870df7e6",
+            "label": "Excerpt Length",
+            "name": "acfb_post_timeline_excerpt_length",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 20,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5da198714ff1d",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaab2864d4de",
+            "label": "Typography",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaab462a83de",
+            "label": "Title Custom Typography",
+            "name": "acfb_post_timeline_title_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaab3f1a83da",
+            "label": "Title",
+            "name": "acfb_post_timeline_title_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaab462a83de",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 25,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaab498a83df",
+            "label": "Meta Custom Typography",
+            "name": "acfb_post_timeline_meta_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaab415a83db",
+            "label": "Meta",
+            "name": "acfb_post_timeline_meta_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaab498a83df",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 16,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaab4aea83e0",
+            "label": "Excerpt Custom Typography",
+            "name": "acfb_post_timeline_meta_excerpt_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaab428a83dc",
+            "label": "Excerpt",
+            "name": "acfb_post_timeline_excerpt_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaab4aea83e0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 17,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaab4bea83e1",
+            "label": "Button Custom Typography",
+            "name": "acfb_post_timeline_meta_button_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaab447a83dd",
+            "label": "Button",
+            "name": "acfb_post_timeline_button_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaab4bea83e1",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 16,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaab5825e88c",
+            "label": "Opposite Title Custom Typography",
+            "name": "acfb_post_timeline_opposite_title_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaab5a75e88d",
+            "label": "Opposite Title",
+            "name": "acfb_post_timeline_opposite_title_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaab5825e88c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 25,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaab5ce5e88e",
+            "label": "Opposite Meta Custom Typography",
+            "name": "acfb_post_timeline_opposite_meta_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaab5f65e88f",
+            "label": "Opposite Meta",
+            "name": "acfb_post_timeline_opposite_meta_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaab5ce5e88e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 16,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaab62f5e890",
+            "label": "Opposite Excerpt Custom Typography",
+            "name": "acfb_post_timeline_opposite_excerpt_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaab6445e891",
+            "label": "Opposite Excerpt",
+            "name": "acfb_post_timeline_opposite_excerpt_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaab62f5e890",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 17,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaab6645e892",
+            "label": "Opposite Button Custom Typography",
+            "name": "acfb_post_timeline_opposite_button_custom_typography",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eaab6805e893",
+            "label": "Opposite Button",
+            "name": "acfb_post_timeline_opposite_button_typo",
+            "type": "typography",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5eaab6645e892",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "font_family_enable": 0,
+            "font_family": "default",
+            "font_size": 16,
+            "font_weight": "default",
+            "font_transform": "default",
+            "font_style": "default",
+            "font_decoration": "default",
+            "font_line_height": "0.1",
+            "font_letter_spacing": 0
+        },
+        {
+            "key": "field_5eaab2954d4df",
+            "label": "Colors",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5dbad6591549c",
+            "label": "Timeline Background Color",
+            "name": "acfb_post_timeline_background",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#f3f4f5"
+        },
+        {
+            "key": "field_5da198716f325",
+            "label": "Title Custom Color",
+            "name": "acfb_post_timeline_title_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5da198717f4f8",
+            "label": "Title Color",
+            "name": "acfb_post_timeline_title_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5da198716f325",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5da19871a798a",
+            "label": "Title Hover Color",
+            "name": "acfb_post_timeline_title_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5da198716f325",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5da19871f154b",
+            "label": "Meta Custom Color",
+            "name": "acfb_post_timeline_meta_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5da19872958af",
+            "label": "Meta Color",
+            "name": "acfb_post_timeline_meta_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5da19871f154b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5da19873428b5",
+            "label": "Excerpt Custom Color",
+            "name": "acfb_post_timeline_excerpt_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5da19873bf102",
+            "label": "Excerpt Color",
+            "name": "acfb_post_timeline_excerpt_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5da19873428b5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5da1987431f4a",
+            "label": "Button Custom Color",
+            "name": "acfb_post_timeline_button_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5da19874551d2",
+            "label": "Button Background Color",
+            "name": "acfb_post_timeline_button_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5da1987431f4a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#e0e0e0"
+        },
+        {
+            "key": "field_5da1987469ddf",
+            "label": "Button Text Color",
+            "name": "acfb_post_timeline_button_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5da1987431f4a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5da1987479fb3",
+            "label": "Button Background Hover Color",
+            "name": "acfb_post_timeline_button_background_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5da1987431f4a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#e0e0e0"
+        },
+        {
+            "key": "field_5da1987490ee8",
+            "label": "Button Text Hover Color",
+            "name": "acfb_post_timeline_button_text_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5da1987431f4a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5dbad92eaae41",
+            "label": "Divider Color",
+            "name": "acfb_post_timeline_divider_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#f3f4f5"
+        },
+        {
+            "key": "field_5dbad9c8aae42",
+            "label": "Circle Color",
+            "name": "acfb_post_timeline_circle_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#f3f4f5"
+        },
+        {
+            "key": "field_5dbc20622b75e",
+            "label": "Circle Border Color",
+            "name": "acfb_post_timeline_circle_border_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5dbc126adadc4",
+            "label": "Timeline Opposite Background Color",
+            "name": "acfb_post_timeline_opposite_background",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#f3f4f5"
+        },
+        {
+            "key": "field_5dbc220a91493",
+            "label": "Opposite Title Custom Color",
+            "name": "acfb_post_timeline_opposite_title_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5dbc223591494",
+            "label": "Title Color",
+            "name": "acfb_post_timeline_opposite_title_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dbc220a91493",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5dbc223991495",
+            "label": "Title Hover Color",
+            "name": "acfb_post_timeline_opposite_title_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dbc220a91493",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5dbc224f91497",
+            "label": "Opposite Meta Custom Color",
+            "name": "acfb_post_timeline_opposite_meta_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5dbc22b691498",
+            "label": "Meta Color",
+            "name": "acfb_post_timeline_opposite_meta_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dbc224f91497",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5dbc22f09149a",
+            "label": "Opposite Excerpt Custom Color",
+            "name": "acfb_post_timeline_opposite_excerpt_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5dbc230b9149b",
+            "label": "Excerpt Color",
+            "name": "acfb_post_timeline_opposite_excerpt_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dbc22f09149a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5dbc23569149d",
+            "label": "Opposite Button Custom Color",
+            "name": "acfb_post_timeline_opposite_button_custom_color",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5dbc23829149e",
+            "label": "Button Background Color",
+            "name": "acfb_post_timeline_opposite_button_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dbc23569149d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#e0e0e0"
+        },
+        {
+            "key": "field_5dbc23949149f",
+            "label": "Button Text Color",
+            "name": "acfb_post_timeline_opposite_button_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dbc23569149d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5dbc23a8914a0",
+            "label": "Button Background Hover Color",
+            "name": "acfb_post_timeline_opposite_button_background_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dbc23569149d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#e0e0e0"
+        },
+        {
+            "key": "field_5dbc23c2914a1",
+            "label": "Button Text Hover Color",
+            "name": "acfb_post_timeline_opposite_button_text_hover_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5dbc23569149d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#191e23"
+        },
+        {
+            "key": "field_5eaab29b4d4e0",
+            "label": "Sizing",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5df49f8b266f0",
+            "label": "Timeline Image Size",
+            "name": "acfb_post_timeline_image_size",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 100,
+            "min": "",
+            "max": "",
+            "step": "",
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_5eaab2a24d4e1",
+            "label": "Spacing",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5eaab38f4d4e2",
+            "label": "Margin",
+            "name": "acfb_post_timeline_margin",
+            "type": "margin",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "margin_enable": 0,
+            "margin_top": "",
+            "margin_right": "",
+            "margin_bottom": "",
+            "margin_left": ""
+        },
+        {
+            "key": "field_5eaab3a14d4e3",
+            "label": "Padding",
+            "name": "acfb_post_timeline_padding",
+            "type": "padding",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "padding_enable": 0,
+            "padding_top": "",
+            "padding_right": "",
+            "padding_bottom": "",
+            "padding_left": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/acfb-post-timeline"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1588248514
+}

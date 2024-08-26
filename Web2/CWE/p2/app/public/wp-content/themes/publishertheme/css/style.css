@@ -1,0 +1,31 @@
+/*
+Theme Name: Publisher Theme
+Author: Jardel Mitchell
+Version: 1.0
+Description: A theme for the Publisher website
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+  }
